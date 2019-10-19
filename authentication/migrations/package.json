@@ -1,0 +1,21 @@
+{
+  "name": "knex-migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm i && node . m && knex seed:run",
+    "add-migration": "knex migrate:make",
+    "run-migrations": "node . m",
+    "rollback-migration": "node . r",
+    "add-seed": "knex seed:make",
+    "run-seed": "knex seed:run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "knex": "0.19.1",
+    "mysql2": "1.6.5"
+  }
+}

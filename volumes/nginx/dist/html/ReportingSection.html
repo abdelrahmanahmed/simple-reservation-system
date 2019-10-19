@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<link href="/css/graph.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+
+<title class="translation" data-i18n="translation.Reportingsection_page"></title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body onload="getSessionValue()" class="translation errorTranslation">
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div class="topnav col-lg-12 col-md-12 col-sm-12 col-sm-offset-1 ">
+				<div class="rhombus rhombus_top"></div>
+				<img class="vf-logo vf-top" src="img/vf-logo.png"
+					alt="Vodafone logo - home"> <label
+					class="header header_scroll header_margin col-sm-offset-1"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav ">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"
+								data-i18n="translation.selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"
+								data-i18n="translation.selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label><a
+							class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 primary-menu-height"
+				id="primary-menu_scroll">
+				<ul class="menu">
+					<li class="menu_item menu_item_height"
+						onclick="location.href='homepage.html'" id="home"><img
+						class="menubar_img" alt="Home.png" src="img/Home.png"> <a
+						href="homepage.html" class="menubar_page"
+						data-i18n="translation.Home"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='newSubscription.html'" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="img/New-Subscription.png"> <a
+						href="newSubscription.html" class="menubar_page"
+						data-i18n="translation.NewSubscription"></a></li>
+					<span class="pipe" id="new_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='servicePortal.html'" id="service"><img
+						class="menubar_img" alt="Service-Portal.png"
+						src="img/Service-Portal.png"> <a href="servicePortal.html"
+						class="menubar_page" data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" id="service_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='Admin.html'" id="admin"><img
+						id="menu_admin" class="menubar_img" alt="Admin-portal.png"
+						src="img/Human-black-white-new.png"><a href="Admin.html"
+						class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="img/white-arrow.png"></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 secondary-menu-height">
+				<ul class="sec_menu sec_menu_pad">
+					<li class="sec_menu_item"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item sec_menu_item_active"
+						onclick="location.href='Reporting.html'" id="reporting"><img
+						class="sec_menubar_img" alt="New-Subscription.png"
+						src="img/secmenu/Reporting.png"> <a href="Reporting.html"
+						class="sec_menubar_page" data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='UserAccessControl.html'" id="user_access"><img
+						class="sec_menubar_img" alt="user_access.png"
+						src="/img/secmenu/User-Acces-control.png"> <a
+						href="UserAccessControl.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='Settings_Configuration.html'" id="setting"><img
+						class="sec_menubar_img" alt="Admin-portal.png"
+						src="img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a></li>
+				</ul>
+			</div>
+			<!--Title-->
+			<div
+				class="hometitle title_margin1 col-lg-12 col-md-12 col-sm-11 col-sm-offset-1">
+				<h1 class="tabswidth" id="currentReporting"
+					data-i18n="translation.reporting"></h1>
+			</div>
+			<!--Tab Starts-->
+			<div
+				class="tabs mainContainer col-sm-11 col-lg-12 col-md-12 col-sm-offset-1 main_container-scroll">
+				<div class="error-alert-box alert errorAlert">
+					<div class="alertText titleText wrapText">
+						<div class="newSubAlertText confirmationDownload" id='err-title'></div>
+					</div>
+					<div class="alertText"></div>
+				</div>
+				<ul class="tab-links tabborderBottom" id="tab-links_reporting"
+					style="display: none;">
+					<li class="activeTab firstTab"><a href="#tabA"
+						data-i18n="translation.manual_report"></a></li>
+					<li><a href="#tabB" data-i18n="translation.automated_report"></a></li>
+				</ul>
+				<!--Tab Content-->
+				<div class="tab-content col-sm-12_Spr2 col-lg-12 col-md-12"
+					id="tabs_reporting">
+					<div class="tab activeTab" id="tabA">
+						<div class="beg-col util-profile" id="util-profile">
+							<div
+								class="search-crit-Reporting col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2 ">
+								<div class="filter-crit" id="search_util_profile"
+									data-i18n="translation.Filter_Criteria"></div>
+								<div class="beg-row  end-col col-lg-12 col-md-12 col-sm-12">
+									<div class="  col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 1 starts-->
+										<div>
+											<label class="type" data-i18n="translation.label_From"></label>
+											<input id="util-from" type="text"
+												class="dateClass date-icon-class" placeholder="dd/mm/yyyy"
+												name="bday" min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 1 ends  -->
+									</div>
+									<div class=" col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 2 starts-->
+										<div>
+											<label class="type" data-i18n="translation.label_To">
+											</label><br /> <input id="util-to" type="text"
+												class="dateClass date-icon-class" placeholder="dd/mm/yyyy"
+												name="bday" min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 2 ends -->
+									</div>
+									<div class=" col-lg-3 col-md-3 col-sm-3">
+										<!-- Select box 1  -->
+										<div class="status-report-dd  ">
+											<label class="type" id="profileType-util-profile"
+												data-i18n="translation.label_Profile_Type"></label>
+											<div class="cs-options" id="util-profileType">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="profileTypeSelect-util-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_profileType-util-profile">
+												</ul>
+											</div>
+											<select class="cs-default profileType"
+												id="profileSelect-util-profile">
+											</select>
+
+											<div class="profile-text" id="profileTypeText-util-profile"></div>
+										</div>
+									</div>
+									<!-- Select box 2 ends  -->
+								</div>
+								<div
+									class="content-text content_align col-lg-12 col-md-12 col-sm-12"
+									id="reportRange" data-i18n="translation.reportRange"></div>
+								<div class="beg-row end-col col-lg-12 col-md-12 col-sm-12"
+									id="report-end-row-padding">
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Select box starts -->
+										<div class="status-report-dd" id="status_rep_col">
+											<div class="type" id="channelType-util-profile"
+												data-i18n="translation.label_Channel"></div>
+											<div class="cs-options" id="util-channel">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="channelTypeSelect-util-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_channelType-util-profile">
+												</ul>
+											</div>
+											<select class="cs-default channelType"
+												id="channelSelect-util-profile">
+											</select>
+
+											<div class="status-text" id="channelTypeText-util-profile"></div>
+										</div>
+										<!-- Select box ends -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3  gr-admin-col">
+										<!-- Select box 1 -->
+										<div class="status-report-dd">
+											<div class="type" id="countryType-util-profile"
+												data-i18n="translation.label_Country"></div>
+											<div class="cs-options" id="util-country">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="countryTypeSelect-util-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_countryType-util-profile">
+												</ul>
+											</div>
+											<select class="cs-default countryType"
+												id="countrySelect-util-profile">
+											</select>
+
+											<div class="status-text" id="countryTypeText-util-profile"></div>
+										</div>
+										<!-- Select box 1 ends  -->
+									</div>
+									<div class="  col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd gr-admin-next">
+											<div class="type" id="simType-util-profile"
+												data-i18n="translation.label_SIM_Company"></div>
+											<div class="cs-options" id="util-sim">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="simTypeSelect-util-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_simType-util-profile">
+												</ul>
+											</div>
+											<select class="cs-default simType"
+												id="simSelect-util-profile">
+											</select>
+											<div class="status-text" id="simTypeText-util-profile"></div>
+										</div>
+									</div>
+									<div class=" end-col col-lg-2 col-md-2 col-sm-2">
+										<button class="custombutton btn_disabled show-btn filter_btn"
+											name="search" type="submit" id="generateReport-util-profile"
+											data-i18n="translation.submitbtn_1" disabled="disabled"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="beg-col avl-profile" id="avl-profile">
+							<div
+								class="col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2 search-crit-Reporting ">
+								<div class="filter-crit" id="search-avl-profile"
+									data-i18n="translation.Filter_Criteria"></div>
+								<div class="beg-row  end-col col-lg-12 col-md-12 col-sm-12">
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 1 starts -->
+										<div>
+											<label class="type" data-i18n="translation.label_From"></label><br />
+											<input id="avl-from" type="text" placeholder="dd/mm/yyyy"
+												name="bday" class="dateClass date-icon-class"
+												min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 1 ends -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 2 starts-->
+										<div>
+											<label class="type" data-i18n="translation.label_To"></label><br />
+											<input id="avl-to" type="text" placeholder="dd/mm/yyyy"
+												name="bday" class="dateClass date-icon-class "
+												min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 2 ends  -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd ">
+											<label class="type" id="profileType-avl-profile"
+												data-i18n="translation.label_Profile_Type"></label>
+											<div class="cs-options" id="avl-profileType">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="profileTypeSelect-avl-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_profileType-avl-profile">
+												</ul>
+											</div>
+											<select class="cs-default profileType"
+												id="profileSelect-avl-profile">
+											</select>
+											<div class="status-text" id="profileTypeText-avl-profile"></div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="content-text content_align col-lg-12 col-md-12 col-sm-12 reportRange_settings"
+									id="reportRange" data-i18n="translation.reportRange"></div>
+								<div class="beg-row end-col col-lg-12 col-md-12 col-sm-12"
+									id="report-end-row-padding">
+									<div class="col-lg-3 col-md-3 col-sm-3 gr-admin-col">
+										<!--	Select box 1 -->
+										<div class="status-report-dd" id="status_rep_col">
+											<div class="type" id="countryType-avl-profile"
+												data-i18n="translation.label_Country"></div>
+											<div class="cs-options" id="avl-country">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="countryTypeSelect-avl-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_countryType-avl-profile">
+												</ul>
+											</div>
+											<select class="cs-default countryType"
+												id="countrySelect-avl-profile">
+											</select>
+											<div class="status-text" id="countryTypeText-avl-profile"></div>
+										</div>
+										<!-- Select box 1 ends  -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd" id="tabA">
+											<div class="type" id="simType-avl-profile"
+												data-i18n="translation.label_SIM_Company"></div>
+											<div class="cs-options" id="avl-sim">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="simTypeSelect-avl-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_simType-avl-profile">
+												</ul>
+											</div>
+											<select class="cs-default simType" id="simSelect-avl-profile">
+											</select>
+										</div>
+									</div>
+									<div class="end-col col-lg-3 col-md-3 col-sm-3">
+										<button class="custombutton btn_disabled show-btn filter_btn"
+											name="search" type="submit" id="generateReport-avl-profile"
+											data-i18n="translation.submitbtn_1" disabled="disabled"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="beg-col rdy-profile" id="rdy-profile">
+							<div
+								class="search-crit-Reporting col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2 ">
+								<div class="filter-crit" id="search-rdy-profile"
+									data-i18n="translation.Filter_Criteria"></div>
+								<div class="beg-row end-col col-lg-12 col-md-12 col-sm-12">
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 1 starts  -->
+										<div>
+											<label class="type" data-i18n="translation.label_From"></label><br />
+											<input id="rdy-from" type="text"
+												class="dateClass  date-icon-class report_forms"
+												placeholder="dd/mm/yyyy" name="bday" min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 1 ends -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 2 starts  -->
+										<div>
+											<label class="type" data-i18n="translation.label_To"></label><br />
+											<input id="rdy-to" type="text"
+												class="dateClass date-icon-class report_forms"
+												placeholder="dd/mm/yyyy" name="bday" min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 2 ends  -->
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd">
+											<label class="type" id="profileType-rdy-profile"
+												data-i18n="translation.label_Profile_Type"></label>
+											<div class="cs-options" id="rdy-profileType">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="profileTypeSelect-rdy-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_profileType-rdy-profile">
+												</ul>
+											</div>
+											<select class="cs-default profileType"
+												id="profileSelect-rdy-profile">
+											</select>
+											<div class="status-text" id="profileTypeText-rdy-profile"></div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="content-text content_align col-lg-12 col-md-12 col-sm-12"
+									id="reportRange" data-i18n="translation.reportRange"></div>
+								<div class="beg-row end-col col-lg-12 col-md-12 col-sm-12"
+									id="report-end-row-padding">
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd" id="status_rep_col">
+											<label class="type" id="channelType-rdy-profile"
+												data-i18n="translation.label_Channel"></label>
+											<div class="cs-options" id="rdy-channel">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="channelTypeSelect-rdy-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_channelType-rdy-profile">
+												</ul>
+											</div>
+											<select class="cs-default channelType"
+												id="channelSelect-rdy-profile">
+											</select>
+											<div class="status-text" id="channelTypeText-rdy-profile"></div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd">
+											<label class="type" id="deviceType-rdy-profile"
+												data-i18n="translation.label_Device_Type"></label>
+											<div class="cs-options" id="rdy-device">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="deviceTypeSelect-rdy-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_deviceType-rdy-profile">
+												</ul>
+											</div>
+											<select class="cs-default deviceType"
+												id="deviceSelect-rdy-profile">
+											</select>
+											<div class="status-text" id="deviceTypeText-rdy-profile"></div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd">
+											<label class="type" id="simType-rdy-profile"
+												data-i18n="translation.label_SIM_Company"></label>
+											<div class="cs-options" id="rdy-sim">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="simTypeSelect-rdy-profile"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_simType-rdy-profile">
+												</ul>
+											</div>
+											<select class="cs-default simType" id="simSelect-rdy-profile">
+											</select>
+											<div class="status-text" id="simTypeText-rdy-profile"></div>
+										</div>
+									</div>
+									<div class=" end-col col-lg-2 col-md-2 col-sm-2">
+										<button class="custombutton btn_disabled show-btn filter_btn"
+											name="search" type="submit" id="generateReport-rdy-profile"
+											data-i18n="translation.submitbtn_1" disabled="disabled"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="beg-col profile-dwn" id="profile-dwn">
+							<div
+								class="search-crit-Reporting col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2 ">
+								<div class="filter-crit" id="search-profile-dwn"
+									data-i18n="translation.Filter_Criteria"></div>
+								<div class="beg-row  end-col col-lg-12 col-md-12 col-sm-12_spr2">
+									<div class="col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 1 starts -->
+										<div>
+											<label class="type" data-i18n="translation.label_From"></label>
+											<input id="profile-from"
+												class="dateClass date-icon-class report_forms"
+												placeholder="dd/mm/yyyy" type="text" name="bday"
+												min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 1 ends -->
+									</div>
+									<div class="beg-col col-lg-3 col-md-3 col-sm-3">
+										<!-- Calendar 2 starts-->
+										<div>
+											<label class="type" data-i18n="translation.label_To"></label>
+											<input id="profile-to" type="text" name="bday"
+												class="dateClass date-icon-class report_forms"
+												placeholder="dd/mm/yyyy" min="2000-01-02"><br>
+										</div>
+										<!-- Calendar 2 ends -->
+									</div>
+									<div class=" beg-col col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd">
+											<label class="type " id="statusType-profile-dwn"
+												data-i18n="translation.label_Status"></label>
+											<div class="cs-options" id="profile-status">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="statusTypeSelect-profile-dwn"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_statusType-profile-dwn">
+												</ul>
+											</div>
+											<select class="cs-default statusType"
+												id="statusSelect-profile-dwn">
+											</select>
+											<div class="status-text" id="statusTypeText-profile-dwn"></div>
+										</div>
+									</div>
+									<div class="  col-lg-3 col-md-3 col-sm-3 beg-col">
+										<div class="status-report-dd ">
+											<label class="type" id="profileType-profile-dwn"
+												data-i18n="translation.label_Profile_Type"></label>
+											<div class="cs-options" id="profile-profile">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="profileTypeSelect-profile-dwn"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_profileType-profile-dwn">
+												</ul>
+											</div>
+											<select class="cs-default profileType"
+												id="profileSelect-profile-dwn">
+											</select>
+											<div class="status-text" id="profileTypeText-profile-dwn"></div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="content-text content_align col-lg-12 col-md-12 col-sm-12"
+									id="reportRange" data-i18n="translation.reportRange"></div>
+								<div class="beg-row end-col col-lg-12 col-md-12 col-sm-12_Spr2"
+									id="report-end-row-padding">
+									<div class=" col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd ">
+											<div class="type" id="channelType-profile-dwn"
+												data-i18n="translation.label_Channel"></div>
+											<div class="cs-options" id="profile-channel">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="channelTypeSelect-profile-dwn"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_channelType-profile-dwn">
+												</ul>
+											</div>
+											<select class="cs-default channelType"
+												id="channelSelect-profile-dwn">
+											</select>
+											<div class="status-text" id="channelTypeText-profile-dwn"></div>
+										</div>
+									</div>
+									<div class="beg-col col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd ">
+											<div class="type " id="deviceType-profile-dwn"
+												data-i18n="translation.label_Device_Type"></div>
+											<div class="cs-options" id="profile-device">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="deviceTypeSelect-profile-dwn"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_deviceType-profile-dwn">
+												</ul>
+											</div>
+											<select class="cs-default deviceType"
+												id="deviceSelect-profile-dwn">
+											</select>
+											<div class="status-text" id="deviceTypeText-profile-dwn"></div>
+										</div>
+									</div>
+									<div class=" beg-col col-lg-3 col-md-3 col-sm-3">
+										<div class="status-report-dd  ">
+											<div class="type " id="simType-profile-dwn"
+												data-i18n="translation.label_SIM_Company"></div>
+											<div class="cs-options" id="profile-sim">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="simTypeSelect-profile-dwn"
+														data-i18n="translation.label_all" data-value="all"></span>
+													<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul"
+													id="cs-option-ul_simType-profile-dwn">
+												</ul>
+											</div>
+											<select class="cs-default simType" id="simSelect-profile-dwn">
+											</select>
+											<div class="status-text" id="simTypeText-profile-dwn"></div>
+										</div>
+									</div>
+									<div class=" beg-col col-lg-2 col-md-2 col-sm-2 ">
+										<button class="custombutton btn_disabled show-btn filter_btn"
+											name="search" type="submit" id="generateReport-profile-dwn"
+											data-i18n="translation.submitbtn_1" disabled="disabled"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="noRecords col-lg-12 col-md-12 col-sm-12" id="no-records"></div>
+						<div
+							class="util-profile-report  col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2">
+							<div class="util-profile-rep-title" id="util-prof-rep"
+								data-i18n="translation.utilized"></div>
+							<div
+								class="pagination beg-col end-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep1" class="optionselector">
+								</select> <label data-i18n="translation.of"></label> <label
+									id="numberofrecords"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="util-download-csv" class="rep-dwn-icon download-csv"
+										src="/img/download-csv.png"> <img class="rep-dwn-icon"
+										id="util-download-xml" src="/img/download-xml.png">
+								</div>
+							</div>
+							<div class="util-profile-rep">
+								<table class="dashboard sort-table" id="util_table">
+									<thead>
+										<tr id="bg">
+											<th class="reserved_date dateHeader"><span
+												data-i18n="translation.Report_date_1"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="reserved_profile"><span
+												data-i18n="translation.label_Profile_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="reserved_channel"><span
+												data-i18n="translation.label_Channel"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="reserved_count reportingHeader"><span
+												data-i18n="translation.utilizedProfileCount"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="reserved_country reportingHeader"><span
+												data-i18n="translation.label_Country"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="reserved_sim_company reportingHeader"><span
+												data-i18n="translation.label_SIM_Company"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+										</tr>
+									</thead>
+									<tbody id="table-body">
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div
+							class="avl-profile-report col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2">
+							<div class="avl-profile-rep-title" id="avail_prof_rep"
+								data-i18n="translation.availableProfile"></div>
+							<div
+								class="pagination beg-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis"
+								style="display: block;">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep2" class="optionselector"></select> <label
+									data-i18n="translation.of"></label> <label
+									id="numberofrecords_2"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="avl-download-csv" class="download-csv"
+										src="/img/download-csv.png"> <img id="avl-download-xml"
+										src="/img/download-xml.png">
+								</div>
+							</div>
+							<div class="avl-profile-rep">
+								<table class="dashboard sort-table" id="avl_table">
+									<thead>
+										<tr id="bg">
+											<th class="available_esim_date dateHeader"><span
+												data-i18n="translation.Report_date_1"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="available_esim_profile"><span
+												data-i18n="translation.label_Profile_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="available_esim_count"><span
+												data-i18n="translation.availableProfileCount"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="available_esim_country"><span
+												data-i18n="translation.label_Country"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="available_esim_sim_company"><span
+												data-i18n="translation.label_SIM_Company"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+										</tr>
+									</thead>
+									<tbody id="avl-table-body">
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div
+							class="rdy-profile-report  col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2">
+							<div class="rdy-profile-rep-title" id="ready_download_prof"
+								data-i18n="translation.readyDownload"></div>
+							<div
+								class="pagination beg-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis"
+								style="display: block;">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep3" class="optionselector">
+								</select> <label data-i18n="translation.of"></label> <label
+									id="numberofrecords_3"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="rdy-download-csv" class="download-csv"
+										src="/img/download-csv.png"> <img id="rdy-download-xml"
+										src="/img/download-xml.png">
+								</div>
+							</div>
+							<div class="rdy-profile-rep">
+								<table class="dashboard sort-table" id="rdy_table">
+									<thead>
+										<tr id="bg">
+											<th class="unconfirmed_date dateHeader"><span
+												data-i18n="translation.Report_date_1"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_profile"><span
+												data-i18n="translation.label_Profile_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_channel"><span
+												data-i18n="translation.label_Channel"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_device"><span
+												data-i18n="translation.label_Device_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_profile_count"
+												id="ready_download_count"><span
+												data-i18n="translation.readyDownloadCount"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_country"><span
+												data-i18n="translation.label_Country"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="unconfirmed_sim_company"><span
+												data-i18n="translation.label_SIM_Company"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+										</tr>
+									</thead>
+									<tbody id="rdy-table-body">
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div
+							class="profile-dwn-report  col-lg-12 col-md-12 col-sm-12_Spr2 search_criteria2">
+
+							<div class="profile-dwn-rep-title" id="prof_download_rep_title"
+								data-i18n="translation.profileDownloadReport"></div>
+							<div
+								class="pagination beg-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis"
+								style="display: block;">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep4" class="optionselector"></select> <label
+									data-i18n="translation.of"></label> <label
+									id="numberofrecords_4"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="profile-download-csv" class="download-csv"
+										src="/img/download-csv.png"> <img
+										id="profile-download-xml" src="/img/download-xml.png">
+								</div>
+							</div>
+							<div class="device-dis-tt"></div>
+							<div class="device-dis-arrow">
+								<img src="/img/hover-triangle.png">
+							</div>
+							<div class="status-col-tt"></div>
+							<div class="status-col-arrow">
+								<img src="/img/hover-triangle.png">
+							</div>
+							<div class="profile-dwn-rep">
+								<table class="dashboard sort-table" id="profile_table">
+									<thead>
+										<tr id="bg">
+											<th class="esim_status_msisdn"><span
+												data-i18n="translation.MSISDN"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="esim_status_iccid"><span
+												data-i18n="translation.ICCID"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="fail-reason"></th>
+											<th class="fail-col"></th>
+											<th class="esim_status"><span
+												data-i18n="translation.label_Status"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="esim_status_profile"><span
+												data-i18n="translation.label_Profile_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="esim_status_channel"><span
+												data-i18n="translation.label_Channel"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="eid-col"></th>
+											<th class="esim_status_device"><span
+												data-i18n="translation.label_Device_Type"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="esim_status_sim_company"><span
+												data-i18n="translation.label_SIM_Company"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+											<th class="esim_status_date dateTimeHeader"><span
+												data-i18n="translation.dateAndTime"></span><span
+												class="sorting-option"><img class="sorting-arrow"
+													src="/img/sorting-arrow.png"></span></th>
+										</tr>
+									</thead>
+									<tbody id="status-table-body">
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab" id="tabB">
+						<div class="beg-col col-lg-12 col-md-12 col-sm-12_Spr2">
+							<div class="file-upload-log"
+								data-i18n="translation.automated_report" id="autrep_file-log"></div>
+							<a id="manage-report-schedule"
+								data-i18n="translation.manage-report-schedule"
+								onclick="reportingCall()"></a>
+							<div
+								class="pagination beg-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep4" class="optionselector"></select> <label data-i18n="translation.of"></label>
+								<label id="numberofrecords_4"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="download-csv" class="rep-dwn-icon"
+										src="img/download-csv.png"> <img class="rep-dwn-icon"
+										id="" src="img/download-xml.png">
+								</div>
+							</div>
+							<div>
+
+								<table class="dashboard sort-table">
+									<thead style="white-space: nowrap;">
+										<tr>
+											<th id="selectAllcol" class="no-sort"><input
+												type="checkbox" value="" class="checkInput" id="select_All"
+												class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All"
+												id="selectAll" data-i18n="translation.select_all"></label></th>
+											<th data-i18n="translation.report_name" class="auto_rep-col"></th>
+											<th data-i18n="translation.generated_on" class="auto_rep-col"></th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All1" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All1"
+												id="selectAll1"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All2" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All2"
+												id="selectAll2"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All3" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All3"
+												id="selectAll3"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All4" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All4"
+												id="selectAll4"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All5" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All5"
+												id="selectAll5"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All6" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All6"
+												id="selectAll6"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All7" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All7"
+												id="selectAll7"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All8" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All8"
+												id="selectAll8"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All9" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All9"
+												id="selectAll9"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All10" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All10"
+												id="selectAll10"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="download-icons dwnld_Icons">
+								<img id="download-csv" class="rep-dwn-icon"
+									src="img/download-csv.png"> <img class="rep-dwn-icon"
+									id="" src="img/download-xml.png">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="/js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="/js/datepicker.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/js/reporting.js" type="text/javascript"></script>
+	<script src="/js/custom-pagination.js" type="text/javascript"></script>
+	<script src="/js/custom-reportingGraphs-dropDown.js"
+		type="text/javascript"></script>
+	<script src="/js/jquery.tabletoCSV.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</body>
+</html>

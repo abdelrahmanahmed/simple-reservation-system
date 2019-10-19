@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<title class="translation" data-i18n="translation.Login_page"></title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+	name="viewport">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script type="text/javascript">
+	window.history.forward();
+	function noBack() {
+		window.history.forward();
+	}
+</script>
+</head>
+<body onload="noBack()" onpageshow="if (event.persisted) noBack();"
+	onunload="" class="translation errorTranslation">
+	<div class="wrapper">
+		<div class="stretch">
+			<div class="loghead" data-i18n="translation.loghead"></div>
+		</div>
+		<div class="container">
+			<div class="mainContainer col-lg-4 col-sm-4 col-md-4 col-sm-offset-1">
+				<form class="login-fm " action="#" role="form" method="post">
+
+					<div id="entrance">
+						<h1 class="login-head" data-i18n="translation.login"></h1>
+						<div class="error-alert-box alert errorAlert" id="login-err">
+							<div class="alertText titleText wrapText" id="login_err_message">
+								<div class="newSubAlertText confirmationDownload"
+									id="pullalert2"></div>
+							</div>
+							<div class="alertText"></div>
+						</div>
+
+						<div class="fm-data">
+							<label class="form_lbl" id="username_lbl"
+								data-i18n="translation.username"></label> <span class="required">*</span>
+							<div class="fm-error">
+								<i class="i-error-sml"></i>
+								<p class="errorMessage" id="userError"></p>
+							</div>
+							<input type="text" id="username" name="username" class=""
+								placeholder="e.g. John Smith">
+						</div>
+						<div class="fm-data">
+							<label class="form_lbl" id="password_lbl"
+								data-i18n="translation.password"></label> <span class="required">*</span>
+							<div class="fm-error">
+								<i class="i-error-sml"></i>
+								<p class="errorMessage" id="passError"></p>
+							</div>
+
+							<input type="password" id="password" name="password" class=""
+								placeholder="Minimum 6 Characters" autocomplete="off">
+						</div>
+						<div class="fm-data" style="display:none">
+							<a id="forgot-link" data-i18n="translation.forgotlink"> <label>
+							</label>
+							</a>
+						</div>
+						<input class="custombutton voda-btn btn_disabled" id="login"
+							value="Login" disabled="disabled" type="button">
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer>
+			<div class="legal_banner">
+			<span id="copyRight">&copy;&nbsp;</span>
+			<div data-i18n="translation.legal_banner"></div></div>
+		</footer>
+	</div>
+	<script src="/js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		$(window).on(
+				'load',
+				function() {
+					if (location.href.indexOf("auth=failed") > -1) {
+						sessionStorage.clear();
+						$('#pullalert2').attr('data-i18n',
+								'errorTranslation.invalid_credentials');
+						$('#login-err').css('display', 'block');
+						errori18();
+					}
+					if (location.href.indexOf("login") > -1) {
+						sessionStorage.clear();
+						$('#pullalert2').attr('data-i18n',
+								'errorTranslation.unauth_user');
+						$('#login-err').css('display', 'block');
+						errori18();
+					}
+					if (location.href.indexOf("login.html") > -1) {
+						sessionStorage.clear();
+						$('#pullalert2').attr('data-i18n',
+								'errorTranslation.unauth_user');
+						$('#login-err').css('display', 'block');
+						errori18();
+					}
+
+				});
+	</script>
+</body>
+</html>

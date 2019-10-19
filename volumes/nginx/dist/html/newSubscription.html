@@ -1,0 +1,708 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<!--[if gte IE 8]>
+<link href="/css/custom_IE8.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script src="/js/FileSaver.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/js/qrcode.js" type="text/javascript"></script>
+
+<title class="translation" data-i18n="translation.NewSubscription_page"></title>
+</head>
+<body onload="getSessionValue(),populateSubscriptionType()"
+	class="translation errorTranslation">
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div
+				class="topnav col-lg-12 col-md-12 col-sm-12 col-sm-offset-1 col-md-offset-0">
+				<div class="rhombus rhombus_top"></div>
+				<img class="vf-logo vf-top" src="img/vf-logo.png"
+					alt="Vodafone logo - home"> <label
+					class="col-sm-offset-1 header header_scroll header_margin"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav col-sm-offset-1">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"
+								data-i18n="translation.selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"
+								data-i18n="translation.selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label><a
+							class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu primary-menu-width-new col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 col-md-offset-0 primary-menu-height"
+				id="primary-menu_scroll">
+				<ul class="menu">
+					<li class="menu_item menu_item_height"
+						onclick="location.href='homepage.html'" id="home"><img
+						class="menubar_img" alt="Home.png" src="img/Home.png"> <a
+						href="homepage.html" class="menubar_page"
+						data-i18n="translation.Home"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height active"
+						onclick="location.href='newSubscription.html'" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="img/New-Subscription.png"> <a href="#"
+						class="menubar_page" data-i18n="translation.NewSubscription"></a>
+					</li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='servicePortal.html'" id="service"><img
+						class="menubar_img" alt="Service-Portal.png"
+						src="img/Service-Portal.png"> <a href="servicePortal.html"
+						class="menubar_page" data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='Admin.html'" id="admin"><img
+						id="menu_admin" class="menubar_img" alt="Admin-portal.png"
+						src="img/Human-black-white-new.png"><a href="Admin.html"
+						class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="img/white-arrow.png"></li>
+					<span class="pipe" id="admin_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 col-md-offset-0 secondary-menu-height">
+				<ul class="sec_menu sec_menu_pad">
+					<li class="sec_menu_item"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item" onclick="location.href='Reporting.html'"
+						id="reporting"><img class="sec_menubar_img"
+						alt="New-Subscription.png" src="img/secmenu/Reporting.png">
+						<a href="Reporting.html" class="sec_menubar_page"
+						data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item" onclick="location.href='Admin.html'"
+						id="user_access"><img class="sec_menubar_img"
+						alt="Service-Portal.png" src="img/secmenu/User-Acces-control.png">
+						<a href="servicePortal.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='Settings_Configuration.html'" id="setting"><img
+						class="sec_menubar_img" alt="Admin-portal.png"
+						src="img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a></li>
+				</ul>
+			</div>
+
+			<!--Title-->
+			<div class="title col-lg-12 col-md-12 col-sm-11 col-sm-offset-1">
+				<h1 id="currentNew" data-i18n="translation.currentNew"></h1>
+
+			</div>
+			<!--Content-->
+			<div class="mainContainer main_container-scroll">
+				<div class="wizard wizard_scroll col-sm-12 col-lg-12 col-md-12">
+					<ul class="wizard-stp">
+						<li class="step"><img
+							class="wizard-image wizard-image-height"
+							src="img/WizardImages/GeteSIMInprogress.png"></li>
+						<li class="progress-line"><span class="progress progress_mar"></span></li>
+						<li class="step"><img
+							class="wizard-image wizard-image-height"
+							src="img/WizardImages/DevicedetailsWaiting.png"></li>
+						<li class="progress-line"><span class="progress progress_mar"></span></li>
+						<li class="step"><img
+							class="wizard-image wizard-image-height"
+							src="img/WizardImages/Confirmationcodewaiting.png"></li>
+					</ul>
+					<ul class="wizard-stp-lbl">
+						<li class="col-sm-3 col-lg-3 col-md-3 step_lbl"
+							id="getEsimStepper" data-i18n="translation.getEsimStepper"></li>
+
+						<li class="col-sm-3 col-lg-3 col-md-3 step_lbl"
+							id="deviceDetailsStepper"
+							data-i18n="translation.deviceDetailsStepper"></li>
+
+						<li class="col-sm-3 col-lg-3 col-md-3 step_lbl"
+							id="confirmationStepper"
+							data-i18n="translation.confirmationStepper"></li>
+					</ul>
+				</div>
+				<div id="newSubscription"
+					class="col-sm-11 col-lg-12 col-md-12 col-sm-offset-1">
+
+					<div class="getEsim" id="getEsim" data-i18n="translation.getEsim"></div>
+					<!-- Alert messages-->
+					<div class="error-alert-box alert errorAlert" id="getEsim_error">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="getEsim_errorMsg" data-i18n="translation.alertTitle1_error"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="warning-alert-box alert warning">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle1_warning"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="email_successAlert email_alert">
+						<div
+							class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+							id="alertTitle1_success"></div>
+					</div>
+
+					<!-- Alert messages ends-->
+					<div class="subType">
+						<div class="subType_scroll" id="subType"
+							data-i18n="translation.subType"></div>
+						<div class="cs-options">
+							<div class="cs-placeholder">
+								<span class="cs-title" id="subTypeSelect"
+									data-i18n="translation.subTypeSelect"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul" id="cs-option-ul_subscriptionType">
+							</ul>
+						</div>
+						<select class="cs-default subscriptionType" id="subsciptionselect">
+						</select>
+						<div class="subs-text" id="subTypeText"
+							data-i18n="translation.subTypeText"></div>
+					</div>
+					<div id="getNewEsim_Sc1"
+						class="newSim col-sm-12 col-lg-12 col-md-12">
+						<div class="eSIMimage beg-col col-sm-6 col-lg-6 col-md-6">
+							<img alt="Picture1" src="img/SIM-front.png">
+						</div>
+						<div class="col-sm-5 col-lg-5 col-md-5 col-sm-offset-1">
+							<br> <span class="subs-text" id="selectESIMText"
+								data-i18n="translation.selectESIMText"> </span><br> <span
+								class="subs-text" id="selectESIMText2"
+								data-i18n="translation.selectESIMText2"> </span><br>
+							<div class="margin-NewSubscription">
+								<button id="eSIM" class="custombutton eSIM" name="submit"
+									data-i18n="translation.eSIM"></button>
+								<br> <span class="subs-text" id="selectESIMText3"
+									data-i18n="translation.selectESIMText3"></span>
+							</div>
+						</div>
+					</div>
+					<div class="newSim1 col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div class="subType1 beg-col col-sm-6 col-lg-6 col-md-6" id="sub_type_tag">
+							<span id="subType1"></span> <span class="subs-text subscrptext"
+								id="subscrptext1"></span> <span
+								data-i18n="translation.subscription_type_lable"></span><span
+								class="subs-text boldtext" id="subscrptextVal1">Post Pay</span>
+						</div>
+					</div>
+					<div id="getNewEsim_Sc2"
+						class="newSim  col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div
+							class="eSIMimage-subscription beg-col col-sm-6 col-lg-6 col-md-6"
+							id="getesim_image">
+							<div class="newEsim-col-lt">
+								<img id="pic" alt="Picture1" src="img/SIM-front.png">
+
+								<div class="iccidNumber">
+									<span>ICCID:</span><span id="iccidNumber"></span>
+								</div>
+
+								<img class="barcode" id="bar-code">
+							</div>
+
+						</div>
+						<div
+							class="newEsim1-subscription end-col col-sm-6 col-lg-6 col-md-6">
+							<div class="newEsim-col-lt" id="pin_puk">
+								<label id="pin1" data-i18n="translation.pin1"></label> <label
+									id="puk1" data-i18n="translation.puk1"></label><br> <label
+									id="pin2" data-i18n="translation.pin2"></label> <label
+									id="puk2" data-i18n="translation.puk2"></label>
+							</div>
+						</div>
+					</div>
+					<div class="copy-print col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div class="copyPrint">
+							<div class="tooltip-success" id="copyICCID"
+								data-i18n="translation.copyICCID"></div>
+							<div class="col-sm-5 col-lg-5 col-md-5 copyICCID_toCRM">
+								<span class=" subs-text-copy" id="copyToClipBoardText"
+									data-i18n="translation.copyToClipBoardText"> </span>
+							</div>
+							<button class="custombutton copy" name="copy" type="submit"
+								id="copyToClipBoard" data-i18n="translation.copyToClipBoard"
+								onclick="copyToClipboard('#iccidNumber')"></button>
+							<a href="" id="first-pdf" style="visibility: hidden"></a>
+						</div>
+					</div>
+					<div class="ns_border ns-newSub"></div>
+					<div
+						class="activation  col-lg-offset-9 col-md-offset-9 col-lg-3 col-sm-12_Spr2 col-md-3"
+						id="activation-req">
+						<button class="custombutton negbutton" id="getEsim_cancel"
+							data-modal-id="popup13" data-i18n="translation.getEsim_cancel"
+							style="display: none;"></button>
+						<button class="custombutton requestActivation btn_disabled"
+							id="disablebtn" data-i18n="translation.disablebtn" disabled=""
+							style="float: right;"></button>
+					</div>
+				</div>
+				<!-- Device Details starts-->
+				<div id="deviceDetails"
+					class="col-sm-11 col-lg-12 col-md-12 col-sm-offset-1">
+					<div class="getEsim ns-newSub" id="deviceDetailMapping "
+						data-i18n="translation.deviceDetailMapping"></div>
+					<!-- Alert messages-->
+					<div class="error-alert-box alert errorAlert" id="error_msisdn">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle2_error_msisdn"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="error-alert-box alert errorAlert" id="error_eid">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle2_error_eid"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="error-alert-box alert errorAlert" id="error_timeout">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="timeout_error_scenario"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+					
+					<div class="error-alert-box alert errorAlert" id="error_imei">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle2_error_imei"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="email_successAlert email_alert">
+						<div
+							class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+							id="alertTitle2_success"></div>
+					</div>
+
+
+					<!-- Alert messages ends-->
+					<div id="device"
+						class="device beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div id ="sub_type_block" class="device-first col-lg-4  col-md-4 col-sm-4 beg-col">
+							<span class="subs-text subscrptext" id="subscrptext"
+								data-i18n="translation.subscrptext"> </span> <span
+								class="subs-text boldtext" id="subscrptextVal"></span>
+						</div>
+						<div class="device-second col-lg-6  col-md-6 col-sm-5">
+							<span class="subs-text icictxt" id="subscrptextICCID"
+								data-i18n="translation.subscrptextICCID"></span> <span
+								class="subs-text boldtext" id="subscrptextICCIDval"></span>
+						</div>
+					</div>
+					<!-- MSISDN-->
+					<div class="msisdn beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div class="col-lg-12 col-md-12 col-sm-12 ">
+							<label class="form_lbl padding-msisdn" id="MSISDN"
+								data-i18n="translation.MSISDN"></label> <span class="required">*</span>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 padding-msisdn">
+							<input type="text" class="txt_msisdn" id="tx_msisd"
+								data-i18n="[placeholder]translation.tx_msisd">
+						</div>
+						<div
+							class="beg-col end-col col-lg-12 col-md-12 col-sm-12 subs-text">
+							<div id="MSISDNtxt" data-i18n="translation.MSISDNtxt"></div>
+						</div>
+					</div>
+					<div class="msisdn  beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+						<div class="eid col-lg-5 col-md-5 col-sm-5 padding-msisdn ">
+							<div>
+								<label class="form_lbl " id="EID" data-i18n="translation.EID"></label>
+							</div>
+
+							<input type="text"
+								class="txt_msisdn scan-icon-class js-open-modal " id="tx_eid"
+								data-i18n="[placeholder]translation.txt_eid" data-modal-id_1="">
+							<img class="scan-icon" src="/img/Scanner.png" id="eid-scan">
+							<div class="subs-text" id="EIDtxt" data-i18n="translation.EIDtxt"></div>
+						</div>
+						<!-- IMEI-->
+						<div class="imei col-lg-5 col-md-5 col-sm-5">
+							<div>
+								<label class="form_lbl" id="IMEI" data-i18n="translation.IMEI"></label>
+							</div>
+							<input type="text" id="tx_imei" class="txt_msisdn"
+								data-i18n="[placeholder]translation.txt_imei"> <img
+								class="scan-icon" src="/img/Scanner.png" id="imei-scan"><br>
+							<div class="subs-text" id="IMEItxt"
+								data-i18n="translation.IMEItxt"></div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<canvas id="qr-canvas"
+							style="background-color: black; margin-top: 20px; display: none;"></canvas>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<input type="button" value="X" id="stop_eid_scan">
+					</div>
+					<div id="interactive" class="viewport col-lg-8 col-md-8 col-sm-8"
+						style="margin-top: 20px;"></div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<input type="button" value="X" id="stop_imei_scan">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<input type="button" value="X" id="stop_imei_scan1">
+					</div>
+					<div
+						class="activation col-lg-offset-9 col-md-offset-9 col-lg-3 col-sm-12_Spr2 col-md-3"
+						id="activation-req2">
+
+						<button class="custombutton negbutton" id="device_details_cancel"
+							value="Cancel" data-modal-id="popup13"
+							data-i18n="translation.getEsim_cancel" style="display: none;"></button>
+						<button
+							class="custombutton requestActivation btn_disabled js-open-modal"
+							id="next" disabled="disabled" data-i18n="translation.next"
+							data-modal-id="popup10"></button>
+					</div>
+				</div>
+				<!-- Confirmation code starts-->
+				<div id="confirmation"
+					class="col-sm-11 col-sm-offset-1 col-lg-12 col-md-12 pull1">
+					<div class="getEsim" id="displayConfirmationCode"
+						data-i18n="translation.displayConfirmationCode"></div>
+					<!-- Alert messages-->
+					<div class="error-alert-box alert errorAlert" id="pdf_download_error">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle3_error"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="warning-alert-box alert warning">
+						<div class="alertText titleText wrapText">
+							<div class="newSubAlertText confirmationDownload"
+								id="alertTitle3_warning"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+
+					<div class="successAlert alert" id="successMessageAlert">
+						<div class="alertText titleText" id="confirmationAlertText">
+							<div class="newSubAlertText confirmationDownload" id="pullalert1"
+								data-i18n="translation.displayConfirmationCodeText"></div>
+						</div>
+						<div class="alertText"></div>
+					</div>
+					<!-- Alert messages ends-->
+					<div class="confirmationCode confirmationCodeHeight">
+						<div
+							class="col-lg-8 col-sm-8 col-md-8 col-lg-offset-1 col-md-offset-1"
+							id="push_confirmation">
+							<div class="code">
+								<span class="type" id="confirmationCodeLabel1"
+									data-i18n="translation.confirmationCodeLabel1"></span>
+							</div>
+							<div class="txt_confirm">
+								<input type="text" id="txt_confirm1" class="txt_confirm"
+									value="" disabled="disabled">
+							</div>
+							<div class="confirm_txt1">
+								<span class="subs-text" id="confirmationCodeLabelText1"
+									data-i18n="translation.confirmationCodeLabelText1"> </span><br>
+								<span class="subs-text" id="confirmationCodeLabelText4">
+								</span>
+							</div>
+						</div>
+						<div id="pull_confirmation">
+							<div class="col-lg-4 col-sm-4 col-md-4" id="confirm-code-align">
+								<div class="code">
+									<span class="type" id="confirmationCodeLabel"
+										data-i18n="translation.confirmationCodeLabel"></span>
+								</div>
+								<div class="txt_confirm">
+									<input type="text" id="txt_confirm" class="txt_confirm"
+										value="" disabled="disabled">
+								</div>
+								<div class="confirm_txt">
+									<span class="subs-text" id="confirmationCodeLabelText"
+										data-i18n="translation.confirmationCodeLabelText"> </span> <br>
+									<span class="subs-text" id="confirmationCodeLabelText2"
+										data-i18n="translation.confirmationCodeLabelText2"> </span>
+								</div>
+								<a href="" id="second-pdf" style="visibility: hidden"></a>
+							</div>
+							<div id="activation1" class="col-lg-5 col-sm-5 col-md-5 ">
+								<span class="type" id="activationCodeLabel1"
+									data-i18n="translation.activationCodeLabel"></span>
+								<div class="">
+									<div class="qrcode">
+										<div align="center" id="qrcodeImage"></div>
+									</div>
+									<div class="type acttext" id="newsub_actext">
+										<span class="subs-text" id="activationText6"> </span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="" id="pullscenario2" style="display: none;">
+						<div class="col-lg-8 col-sm-7 col-md-8">
+							<div id="activation1" class="">
+								<span class="type" id="activationCodeLabel"
+									data-i18n="translation.activationCodeLabel"></span>
+								<div class="">
+									<div class="qrcode pull2-activation">
+										<img class="qrcode1 qrimage" id="qrcodeimg">
+									</div>
+									<div class="type acttext pull2-activation">
+										<span class="subs-text pull2-activation6"
+											id="activationText12"
+											data-i18n="translation.activationText12"> </span>
+									</div>
+								</div>
+								<div class="sidetext">
+									<span class="subs-text pull2-activation3" id="activationText3"
+										data-i18n="translation.activationText3"> </span><br> <span
+										class="subs-text pull2-activation4" id="activationText4"
+										data-i18n="translation.activationText4"> </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="noImage" id="downloadSimParapull2"
+						style="display: none;">
+						<div
+							class="beg-col end-col col-lg-12 col-md-12 col-sm-12 SimParaMar">
+							<div class="subs-text printtxt " id="confirmationCodeDwnld"
+								data-i18n="translation.confirmationCodeDwnld"></div>
+							<div class="col-lg-6 col-sm-6 col-md-6 margin-sim-parameters">
+								<div class="subs-text printtxt  " id="simParameters"
+									data-i18n="translation.simParam_pull2"></div>
+								<div class="subs-text printtxt " id="activationCode_pull2"
+									data-i18n="translation.activationCode_pull2"></div>
+							</div>
+							<div class="col-lg-5 col-sm-5 col-md-5" style="float: right">
+								<button class="custombutton copy col-sm-2 col-lg-2 col-md-2"
+									name="download" id="download-activate"
+									data-i18n="translation.download_activate"></button>
+							</div>
+						</div>
+					</div>
+					<div class="" id="pushscenario2" style="display: none;">
+						<div id="activation1 " class="col-lg-7 col-sm-7 col-md-7">
+							<div class="content-pull2">
+								<div class="print-confirm ">
+									<div class="subs-text printtxt  push2-activation7"
+										id="activationText11" data-i18n="translation.activationText11">
+									</div>
+									<div class="subs-text printtxt  push2-activation11"
+										id="simParameters1" data-i18n="translation.simParameters1"></div>
+								</div>
+								<div class="print-confirm1">
+									<div class="subs-text printtxt   push2-activation9"
+										id="activationText9" data-i18n="translation.activationText9">
+									</div>
+									<div class="subs-text printtxt push2-activation10"
+										id="activationText10" data-i18n="translation.activationText10">
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="custombutton copy downloadbtn-push2 "
+							name="download" id="download-finish1"
+							data-i18n="translation.download_finish"></button>
+						<a href="" id="third-pdf" disabled="disabled"
+							style="visibility: hidden"></a>
+						<div id="syncFnHolder"></div>
+					</div>
+					<div class="simActivation noImage">
+						<div
+							class="beg-col end-col col-lg-12 col-md-12 col-sm-12 SimParaMar">
+							<div class="subs-text printtxt " id="confirmationCodeDwnld1"
+								data-i18n="translation.confirmationCodeDwnld1"></div>
+							<div class="col-lg-6 col-sm-6 col-md-6 margin-sim-parameters">
+								<div class="subs-text printtxt" id="simParameters2"
+									data-i18n="translation.simParameters2"></div>
+								<div class="subs-text printtxt" id="confCode"
+									data-i18n="translation.confCode"></div>
+								<div class="subs-text printtxt" id="actCode"
+									data-i18n="translation.actCode"></div>
+							</div>
+							<div class="col-lg-5 col-sm-5 col-md-5" style="float: right">
+								<button class="custombutton copy col-sm-2 col-lg-2 col-md-2"
+									name="download" id="download-activate2"
+									data-i18n="translation.download_activate2"></button>
+								<button class="custombutton copy col-sm-2 col-lg-2 col-md-2"
+									name="download" id="download-finish"
+									data-i18n="translation.download_finish"></button>
+							</div>
+						</div>
+					</div>
+					<div class="ns_border"></div>
+					<div
+						class=" activation col-lg-offset-9 col-md-offset-9 col-sm-12_Spr2 col-lg-3 col-md-3"
+						id="finish_div">
+
+						<button class="custombutton requestActivation btn_disabled"
+							value="Finish" id="finish" data-i18n="translation.finish"
+							disabled="disabled"></button>
+					</div>
+				</div>
+				<div id="finishActivation"
+					class="col-sm-11 col-sm-offset-1 col-lg-12 col-md-12">
+					<div class="getEsim" id="finalPage"
+						data-i18n="translation.finalPage"></div>
+					<div class="successAlert alert" id="successMessageFinish">
+						<h3 class="alertTitle" id="activationTitle"
+							data-i18n="translation.activationTitle"></h3>
+						<div class="alert-text-NewS">
+							<div data-i18n="translation.finalPageText1"></div>
+						</div>
+					</div>
+					<div class="view-btn-align">
+						<a href="servicePortal.html"><button class="custombutton"
+								id="viewStatusBt" data-i18n="translation.viewStatus"></button></a> <a
+							id="back_home" href="homepage.html"><button class="custombutton"
+								id="backToHome" data-i18n="translation.backToHome"></button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- overlay 10 -->
+		<div id="popup10" class="modal-box">
+			<div class="modal-body">
+				<div class="type ovl-header">
+					<a href="#" class="js-modal-close close openpopup8"
+						data-i18n="translation.popup_close_mark"></a> <span
+						id="swap-confirmation" data-i18n="translation.simSwapConfirmation"></span>
+				</div>
+				<div class="notifications-sim">
+					<div id="swap_content">
+						<span class="type" id="associate_MSISDN"
+							data-i18n="translation.associate_MSISDN"></span><br> <span
+							class="type" id="Swap_profile_detail"
+							data-i18n="translation.Swap_profile_detail"></span>
+						<table class="dashboard note-table" id="swap_table">
+							<thead>
+								<tr>
+									<th data-i18n="translation.ICCID"></th>
+									<th class="word-wrap" data-i18n="translation.EID"></th>
+									<th data-i18n="translation.label_Device_Type"></th>
+									<th data-i18n="translation.label_Status"></th>
+									<th data-i18n="translation.label_time"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td id='swap_iccid' class="MEI-number-break"></td>
+									<td id='swap_eid' class="MEI-number-break"></td>
+									<td id='swap_device'></td>
+									<td id='swap_status'></td>
+									<td id='swap_time'></td>
+								</tr>
+							</tbody>
+						</table>
+						<span class="type" id="Swap_proceed"
+							data-i18n="translation.Swap_proceed"></span>
+					</div>
+					<div class="stopbutton">
+						<button class="custombutton js-open-modal openpopup8"
+							name="Proceed" id="sim_swap_proceed"
+							data-i18n="translation.sim_swap_proceed" value="Proceed"></button>
+						<button class="custombutton negbutton openpopup8" name="Cancel"
+							id="sim_swap_cancel" data-i18n="translation.sim_swap_cancel"
+							value="Cancel"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup13" class="modal-box">
+			<div class="modal-body">
+				<div class="type ovl-header">
+					<a class="js-modal-close close" href="#"
+						data-i18n="translation.popup_close_mark"></a> <span
+						id="oval_cancel_confirmation"
+						data-i18n="translation.oval_cancel_confirmation"></span>
+				</div>
+				<div class="notifications-sim">
+					<h3 class="type">
+						<span id="getEsim_activation_cancel"
+							data-i18n="translation.getEsim_activation_cancel"></span>
+					</h3>
+					<div class="stopbutton" id="button_popup13">
+						<button class="custombutton" name="Apply"
+							id="activation_cancel_yes"
+							data-i18n="translation.activation_cancel_yes"
+							onclick="location.href='homepage.html'"></button>
+						<button class="custombutton negbutton js-modal-close"
+							name="Cancel" id="activation_cancel_no"
+							data-i18n="translation.activation_cancel_no"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/custom.js" type="text/javascript" charset="UTF-8"></script>
+		<script src="/js/newSubscription.js" type="text/javascript"></script>
+		<script src="/js/qrcodelib.js" type="text/javascript"></script>
+		<script src="/js/WebCodeCam.min.js" type="text/javascript"></script>
+		<script src="/js/JsBarcode.all.min.js" type="text/javascript"></script>
+		<script src="/js/clipboard.js" type="text/javascript"></script>
+		<script src="/js/main.js" type="text/javascript"></script>
+		<script src="/js/quagga.js" type="text/javascript"></script>
+</body>
+</html>

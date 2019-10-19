@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<link href="/css/graph.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"
+	charset="UTF-8"></script>
+
+<title class="translation" data-i18n="translation.Reporting_page"></title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body onload="getSessionValue()" class="translation errorTranslation">
+
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div class="topnav col-lg-12 col-md-12 col-sm-12 col-sm-offset-1 ">
+				<div class="rhombus rhombus_top"></div>
+				<img class="vf-logo vf-top" src="img/vf-logo.png"
+					alt="Vodafone logo - home"> <label
+					class="header header_scroll header_margin col-sm-offset-1"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav ">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"
+								data-i18n="translation.selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"
+								data-i18n="translation.selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label><a
+							class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 primary-menu-height"
+				id="primary-menu_scroll">
+				<ul class="menu">
+					<li class="menu_item menu_item_height"
+						onclick="location.href='homepage.html'" id="home"><img
+						class="menubar_img" alt="Home.png" src="img/Home.png"> <a
+						href="homepage.html" class="menubar_page"
+						data-i18n="translation.Home"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='newSubscription.html'" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="img/New-Subscription.png"> <a
+						href="newSubscription.html" class="menubar_page"
+						data-i18n="translation.NewSubscription"></a></li>
+					<span class="pipe" id="new_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='servicePortal.html'" id="service"><img
+						class="menubar_img" alt="Service-Portal.png"
+						src="img/Service-Portal.png"> <a href="servicePortal.html"
+						class="menubar_page" data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" id="service_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='Admin.html'" id="admin"><img
+						id="menu_admin" class="menubar_img" alt="Admin-portal.png"
+						src="img/Human-black-white-new.png"><a href="Admin.html"
+						class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="img/white-arrow.png"></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 secondary-menu-height">
+				<ul class="sec_menu sec_menu_pad">
+					<li class="sec_menu_item"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item sec_menu_item_active"
+						onclick="location.href='Reporting.html'" id="reporting"><img
+						class="sec_menubar_img" alt="New-Subscription.png"
+						src="img/secmenu/Reporting.png"> <a href="Reporting.html"
+						class="sec_menubar_page" data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='UserAccessControl.html'" id="user_access"><img
+						class="sec_menubar_img" alt="user_access.png"
+						src="/img/secmenu/User-Acces-control.png"> <a
+						href="UserAccessControl.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='Settings_Configuration.html'" id="setting"><img
+						class="sec_menubar_img" alt="Admin-portal.png"
+						src="img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a></li>
+				</ul>
+			</div>
+			<!--Title-->
+			<div
+				class="hometitle title_margin1 col-lg-12 col-md-12 col-sm-11 col-sm-offset-1">
+				<h1 class="tabswidth" id="currentReporting"
+					data-i18n="translation.reporting"></h1>
+			</div>
+			<!--Content-->
+			<div
+				class="tabs mainContainer col-sm-11 col-lg-12 col-md-12 col-sm-offset-1 main_container-scroll">
+				<div class="error-alert-box alert errorAlert">
+					<div class="alertText titleText wrapText">
+						<div class="newSubAlertText confirmationDownload" id='err-title'></div>
+					</div>
+					<div class="alertText"></div>
+				</div>
+				<ul class="tab-links tabborderBottom" id="tab-links_reporting"
+					style="display: none;">
+					<li class="activeTab firstTab"><a href="#tabA"
+						data-i18n="translation.manual_report"></a></li>
+					<li><a href="#tabB" data-i18n="translation.automated_report"></a></li>
+				</ul>
+				<!--Tab Content-->
+				<div class="tab-content col-sm-12_Spr2 col-lg-12 col-md-12"
+					id="tabs_reporting">
+					<div class="tab activeTab" id="tabA">
+						<div class="row">
+							<div class="beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+								<div class="beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+									<div class="beg-col col-sm-6 col-md-6 col-lg-6 tabs_settings">
+										<div
+											class="available_profile container_profile container_profile_right"
+											id="utilized_profile_graph2">
+											<div class="available_profile-tt"></div>
+											<div id="available_profile_title" class="type title_profile">
+												<div id="availableProfile"
+													data-i18n="translation.availableProfile"></div>
+												<div class="title-graph-class">
+													<img class="reportIcon" id="available_profile-img"
+														src="img/Info icon.png">
+												</div>
+												<!--  end modal -->
+											</div>
+											<!-- Graph HTML -->
+											<div id="available_graph" class="container_graph">
+												<div class="timeline_graph type ">
+													<span data-i18n="translation.weeklyg"></span><span
+														data-i18n="translation.from"></span><span class="fromTime"></span><span
+														data-i18n="translation.to"></span><span class="toTime"></span>
+												</div>
+												<div class="viewStatus viewMore viewMoreRight" href=""
+													id="viewMore_av" data-i18n="translation.viewMore_av"
+													onclick="location.href='ReportingSection.html'"></div>
+												<div id='available-legend' class=''></div>
+											</div>
+											<!-- end Graph HTML -->
+										</div>
+									</div>
+									<div class="beg-col col-sm-6 col-md-6 col-lg-6 tabs_settings">
+										<div class="utilized_profile container_profile"
+											id="utilized_profile_graph1">
+											<div class="utilized_profile-tt"></div>
+											<div id="utilized_profile_title" class="type title_profile">
+												<div id="utilized" data-i18n="translation.utilized"></div>
+												<div class="title-graph-class">
+													<img class="reportIcon" id="utilized_profile-img"
+														src="img/Info icon.png">
+												</div>
+												<!--  end modal -->
+											</div>
+											<!-- Graph HTML -->
+											<div id="utilized_graph" class="container_graph">
+
+												<div class="timeline_graph type">
+													<span data-i18n="translation.weeklyg"></span><span
+														data-i18n="translation.from"></span><span class="fromTime"></span><span
+														data-i18n="translation.to"></span><span class="toTime"></span>
+												</div>
+												<div class="viewStatus viewMore" href="" id="viewMore_util"
+													data-i18n="translation.viewMore_util"
+													onclick="location.href='ReportingSection.html'"></div>
+												<div id='util-legend' class=''></div>
+
+											</div>
+											<!-- end Graph HTML -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" id="ready-download_profile">
+							<div class="beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+								<div class="beg-col col-sm-12_Spr2 col-lg-12 col-md-12">
+									<div class="beg-col col-sm-6 col-md-6 col-lg-6 tabs_settings">
+										<div class="ready_profile container_profile"
+											id="ready_profile">
+											<div class="ready_profile-tt"></div>
+											<div id="ready_profile_title" class="type title_profile">
+												<div id="readyDownload"
+													data-i18n="translation.readyDownload"></div>
+												<div class="title-graph-class">
+													<img class="reportIcon" id="ready_profile-img"
+														src="img/Info icon.png">
+												</div>
+												<!--  end modal -->
+											</div>
+											<!-- Graph HTML -->
+											<div id="ready_profile_graph" class="container_graph">
+												<div class="timeline_graph type ">
+													<span data-i18n="translation.weeklyg"></span><span
+														data-i18n="translation.from"></span><span class="fromTime"></span><span
+														data-i18n="translation.to"></span><span class="toTime"></span>
+												</div>
+												<div class="viewStatus viewMore" href="" id="viewMore_rdy"
+													data-i18n="translation.viewMore_rdy"
+													onclick="location.href='ReportingSection.html'"></div>
+												<div id='ready_profile-legend' class=''></div>
+											</div>
+											<!-- end Graph HTML -->
+										</div>
+									</div>
+									<div class="beg-col col-sm-6 col-md-6 col-lg-6 tabs_settings ">
+										<div
+											class="download_profile container_profile container_profile_right"
+											id="download_profile">
+											<div class="download_profile-tt"></div>
+											<div id="download_profile_title" class="type title_profile">
+												<div id="profileDownloadReport"
+													data-i18n="translation.profileDownloadReport"></div>
+												<div class="title-graph-class">
+													<img class="reportIcon" id="download_profile-img"
+														src="img/Info icon.png">
+												</div>
+
+											</div>
+											<!-- Graph HTML -->
+											<div id="download_graph" class="container_graph">
+												<div class="timeline_graph type">
+													<span data-i18n="translation.weeklyg"></span><span
+														data-i18n="translation.from"></span><span class="fromTime"></span><span
+														data-i18n="translation.to"></span><span class="toTime"></span>
+												</div>
+											</div>
+											<!-- end Graph HTML -->
+											<div class="viewStatus viewMore viewMoreRight" href=""
+												id="viewMore_dp" data-i18n="translation.viewMore_dp"
+												onclick="location.href='ReportingSection.html'"></div>
+											<div id='download_profile-legend' class=''></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab" id="tabB">
+						<div class="beg-col col-lg-12 col-md-12 col-sm-12_Spr2">
+							<div class="file-upload-log"
+								data-i18n="translation.automated_report" id="autrep_file-log"></div>
+							<a id="manage-report-schedule"
+								data-i18n="translation.manage-report-schedule"
+								onclick="reportingCall()"></a>
+							<div
+								class="pagination beg-col col-lg-12 col-md-12 col-sm-12_Spr2 automated_rep_low_dis">
+								<label data-i18n="translation.show"></label> <select
+									id="optionselector_rep4" class="optionselector"></select> <label data-i18n="translation.of"></label>
+								<label id="numberofrecords_4"></label> <label
+									data-i18n="translation.records"></label>
+								<div class="pagination-arrows">
+								</div>
+								<div class="download-icons">
+									<img id="download-csv" class="rep-dwn-icon"
+										src="img/download-csv.png"> <img class="rep-dwn-icon"
+										id="" src="img/download-xml.png">
+								</div>
+							</div>
+							<div>
+
+								<table class="dashboard sort-table">
+									<thead style="white-space: nowrap;">
+										<tr>
+											<th id="selectAllcol" class="no-sort"><input
+												type="checkbox" value="" class="checkInput" id="select_All"
+												class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All"
+												id="selectAll" data-i18n="translation.select_all"></label></th>
+											<th data-i18n="translation.report_name" class="auto_rep-col"></th>
+											<th data-i18n="translation.generated_on" class="auto_rep-col"></th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All1" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All1"
+												id="selectAll1"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All2" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All2"
+												id="selectAll2"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All3" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All3"
+												id="selectAll3"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All4" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All4"
+												id="selectAll4"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All5" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All5"
+												id="selectAll5"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All6" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All6"
+												id="selectAll6"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All7" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All7"
+												id="selectAll7"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All8" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All8"
+												id="selectAll8"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All9" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All9"
+												id="selectAll9"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="" class="checkInput"
+												id="select_All10" class="js-open-modal" /> <label
+												class="type check-label checkMar" for="select_All10"
+												id="selectAll10"></label></td>
+
+											<td data-i18n="translation.utilized"></td>
+
+											<td>01/02/2016, 09:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="download-icons dwnld_Icons">
+								<img id="download-csv" class="rep-dwn-icon"
+									src="img/download-csv.png"> <img class="rep-dwn-icon"
+									id="" src="img/download-xml.png">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/js/graph.js" type="text/javascript"></script>
+	<script src="/js/custom-reportingGraphs-dropDown.js"
+		type="text/javascript"></script>
+	<script type="text/javascript">
+      $( window ).on('load', function() {
+			  availableReportGraph();
+			  utilizedReportGraph();
+				readyProfileGraph();
+				statusReportGraph();
+  	  });
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<title class="translation" data-i18n="translation.User_Access_page"></title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+	name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"></script>
+</head>
+<body onload="getSessionValue()" class="translation errorTranslation">
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div class="topnav col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 ">
+				<div class="rhombus"></div>
+				<img class="vf-logo" src="/img/vf-logo.png"
+					alt="Vodafone logo - home"> <label class="header"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="/img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="/img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label><img
+							class="profileimg" src="/img/Profile.png"> <a
+							class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 ">
+				<ul class="menu">
+					<li class="menu_item" onclick="location.href='homepage.html'"
+						id="home"><img class="menubar_img" alt="Home.png"
+						src="/img/Home.png"> <a href="homepage.html"
+						class="menubar_page" data-i18n="translation.Home"></a></li>
+					<span class="pipe" id="service_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item"
+						onclick="location.href='newSubscription.html'" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="/img/New-Subscription.png"> <a
+						href="newSubscription.html" class="menubar_page"
+						data-i18n="translation.NewSubscription"></a></li>
+					<span class="pipe" id="new_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item" onclick="location.href='servicePortal.html'"
+						id="service"><img class="menubar_img"
+						alt="Service-Portal.png" src="/img/Service-Portal.png"> <a
+						href="servicePortal.html" class="menubar_page"
+						data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" id="service_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item" onclick="location.href='Admin.html'"
+						id="admin"><img id="menu_admin" class="menubar_img"
+						alt="Admin-portal.png" src="/img/Human-black-white-new.png"><a
+						href="Admin.html" class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="/img/white-arrow.png"></li>
+					<span class="pipe" id="admin_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 ">
+				<ul class="sec_menu">
+					<li class="sec_menu_item sec_menu_item_active"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="/img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item" onclick="location.href='Reporting.html'"
+						id="reporting"><img class="sec_menubar_img"
+						alt="New-Subscription.png" src="/img/secmenu/Reporting.png">
+						<a href="Reporting.html" class="sec_menubar_page"
+						data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='UserAccessControl.html'" id="user_access">
+						<img class="sec_menubar_img" alt="user_access.png"
+						src="/img/secmenu/User-Acces-control.png"> <a
+						href="UserAccessControl.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a>
+					</li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='Settings_Configuration.html'" id="setting">
+						<img class="sec_menubar_img" alt="Admin-portal.png"
+						src="/img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a>
+					</li>
+				</ul>
+			</div>
+			<!--Breadcrumb-->
+			<div
+				class="breadcrumb col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 "
+				id="homepage">
+				<ul>
+					<li><label class="current" id="here"
+						data-i18n="translation.here"></label>&nbsp;</li>
+					<li><label class="sel" href="homepage.html"
+						data-i18n="translation.sel"> </label>&nbsp;</li>
+				</ul>
+			</div>
+			<!--Title-->
+			<div class="hometitle col-lg-12 col-md-12 col-sm-12">
+				<h1 id="welcome_msg"></h1>
+			</div>
+			<!--Content-->
+			<div class="mainContainer col-sm-12 col-lg-12 col-md-12 ">
+				<div class="row" id="new-service">
+					<div class="beg-col col-sm-6 col-md-6 col-lg-6"
+						id="newSubscriptionTab">
+						<div class="homeTabs"
+							onclick="location.href='newSubscription.html'">
+							<img class="homeTabsImg" alt="Home.png"
+								src="/img/homeTabs/New-Sub.png">
+							<div class="homeTabsTitle" id="homeTabsTitleNew"
+								data-i18n="translation.homeTabsTitleNew"></div>
+						</div>
+						<div class="homeTabsText" id="homeTabsTextNew"
+							data-i18n="translation.homeTabsTextNew"></div>
+
+					</div>
+					<div class="end-col col-sm-6 col-md-6 col-lg-6" id="serviceTab">
+						<div class="homeTabs" onclick="location.href='servicePortal.html'">
+							<img class="homeTabsImg" alt="Home.png"
+								src="/img/homeTabs/Service-Portal.png">
+							<div class="homeTabsTitle" id="homeTabsTitleService"
+								data-i18n="translation.homeTabsTitleService"></div>
+						</div>
+						<div class="homeTabsText" id="homeTabsTextService"
+							data-i18n="translation.homeTabsTextService"></div>
+
+					</div>
+
+				</div>
+				<div class="row homeTabContainer" id="adminPortal">
+					<div
+						class="col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+						<div class="homeTabs" onclick="location.href='Admin.html'">
+							<img class="homeTabsImg" alt="Home.png"
+								src="/img/homeTabs/Admin-Portal.png">
+							<div class="homeTabsTitle" id="homeTabsTitleAdmin"
+								data-i18n="translation.homeTabsTitleAdmin"></div>
+						</div>
+						<div class="homeTabsText" id="homeTabsTextAdmin"
+							data-i18n="translation.homeTabsTextAdmin"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/custom.js" type="text/javascript"></script>
+</body>
+</html>

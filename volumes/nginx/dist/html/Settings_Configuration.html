@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<title class="translation"
+	data-i18n="translation.Settings_Configuration_page"></title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+	name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/FileSaver.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"></script>
+</head>
+
+<body onload="getSessionValue()" class="translation errorTranslation">
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div class="topnav col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 ">
+				<div class="rhombus rhombus_top"></div>
+				<img class="vf-logo vf-top" src="img/vf-logo.png"
+					alt="Vodafone logo - home"> <label
+					class="col-sm-offset-1 header header_scroll header_margin"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav ">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default" id="setting_language_selector">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"
+								data-i18n="translation.selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"
+								data-i18n="translation.selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label>
+						<a class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu primary-menu-width col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 primary-menu-height"
+				id="primary-menu_scroll">
+				<ul class="menu">
+					<li class="menu_item menu_item_height"
+						onclick="location.href='homepage.html'" id="home"><img
+						class="menubar_img" alt="Home.png" src="img/Home.png"> <a
+						href="homepage.html" class="menubar_page"
+						data-i18n="translation.Home"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='newSubscription.html'" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="img/New-Subscription.png"> <a
+						href="newSubscription.html" class="menubar_page"
+						data-i18n="translation.NewSubscription"></a></li>
+					<span class="pipe" id="new_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='servicePortal.html'" id="service"><img
+						class="menubar_img" alt="Service-Portal.png"
+						src="img/Service-Portal.png"> <a href="servicePortal.html"
+						class="menubar_page" data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" id="service_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='Admin.html'" id="admin"><img
+						id="menu_admin" class="menubar_img" alt="Admin-portal.png"
+						src="img/Human-black-white-new.png"><a href="Admin.html"
+						class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="img/white-arrow.png"></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 secondary-menu-height">
+				<ul class="sec_menu sec_menu_pad">
+					<li class="sec_menu_item"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item" onclick="location.href='Reporting.html'"
+						id="reporting"><img class="sec_menubar_img"
+						alt="New-Subscription.png" src="img/secmenu/Reporting.png">
+						<a href="Reporting.html" class="sec_menubar_page"
+						data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='UserAccessControl.html'" id="user_access"><img
+						class="sec_menubar_img" alt="user_access.png"
+						src="/img/secmenu/User-Acces-control.png"> <a
+						href="UserAccessControl.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a></li>
+
+					<li class="sec_menu_item sec_menu_item_active"
+						onclick="location.href='Settings_Configuration.html'" id="setting"><img
+						class="sec_menubar_img" alt="Admin-portal.png"
+						src="img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a></li>
+				</ul>
+			</div>
+			<!--Title-->
+			<div
+				class="hometitle title_margin1 col-lg-12 col-md-12 col-sm-11 col-sm-offset-1">
+				<h1 class="tabswidth" id="settingTitle"
+					data-i18n="translation.settingTitle"></h1>
+			</div>
+			<!--Content-->
+			<div
+				class="tabs mainContainer col-sm-11 col-lg-12 col-md-12 col-sm-offset-1 main_container-scroll "
+				id="new_scroll">
+				<ul class="tab-links tabborderBottom" id="tabsetting"
+					style="display: none;">
+					<li class="activeTab firstTab"><a href="#tab11"
+						data-i18n="translation.curr_config"></a></li>
+					<li id="edit_tag"><a href="#tab12"
+						data-i18n="translation.manage_config"></a></li>
+				</ul>
+				<!--Tab Content-->
+				<div class="tab-content">
+					<div class="tab activeTab" id="tab11" style="display: none;">
+						<div class="beg-col col-lg-12 col-md-12 col-sm-12_Spr2">
+							<div class="file-upload-log" data-i18n="translation.auto_Report"></div>
+							<div>
+								<table class="dashboard">
+									<thead>
+										<tr>
+											<th data-i18n="translation.report_name"></th>
+											<th data-i18n="translation.frequency_txt"></th>
+											<th data-i18n="translation.no_of_days"></th>
+											<th data-i18n="translation.action_txt"></th>
+											<th class="no-sort"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="tabChange">
+											<td data-i18n="translation.availableProfile"></td>
+											<td data-i18n="translation.daily"></td>
+											<td>80</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+										<tr class="tabChange">
+											<td data-i18n="translation.PendingProfileReport"></td>
+											<td data-i18n="translation.monthly"></td>
+											<td>80</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+										<tr class="tabChange">
+											<td data-i18n="translation.profileDownloadReport"></td>
+											<td data-i18n="translation.weekly"></td>
+											<td>80</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+										<tr class="tabChange">
+											<td data-i18n="translation.utilized"></td>
+											<td data-i18n="translation.weekly"></td>
+											<td>80</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="file-upload-log stockTable"
+								data-i18n="translation.low_stock_notification_reports"
+								id="file_upload_low_stock"></div>
+							<div>
+								<table class="dashboard">
+									<thead>
+										<tr>
+											<th data-i18n="translation.profile_type"></th>
+											<th data-i18n="translation.threshold_value"></th>
+											<th data-i18n="translation.frequency_txt"></th>
+											<th data-i18n="translation.action_txt"></th>
+											<th class="no-sort"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="tabChange">
+											<td>Post pay</td>
+											<td>1000</td>
+											<td>Daily</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+										<tr class="tabChange">
+											<td>Pre pay</td>
+											<td>1200</td>
+											<td>Weekly</td>
+											<td><img class="bin-icon" src="img/bin.png"
+												data-modal-id="popup16"></td>
+											<td><a href="#tab12"><img class="bin-icon"
+													src="img/edit-icon.png"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab" id="tab12" style="display: block;">
+						<div class="accordion">
+							<div class="accordion-section" id="acc-1">
+								<a class="accordion-section-title" id="accord1"
+									href="#accordion-1"><span id="manageReportSchedule"
+									data-i18n="translation.manageReportSchedule"></span><img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"
+									style="display: block;"><img class="acc-arrow-up" id=""
+									src="img/arrow_up.png" style="display: none;"> <img
+									id="email-accordion5" class="acc-icon" data-modal-id="popup157"
+									src="img/notifications.png"> </a>
+								<div id="accordion-1" class="accordion-section-content open"
+									style="padding: 0 10px;">
+									<!-- Alert messages-->
+									<div class="error-alert-box alert errorAlert" id="errorReport">
+										<div class="alertText titleText wrapText">
+											<div class="newSubAlertText confirmationDownload"
+												id="alertReport_error"></div>
+										</div>
+										<div class="alertText"></div>
+									</div>
+
+									<div class="email_successAlert email_alert" id="successReport">
+										<div
+											class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+											id="alertReport_success"></div>
+										<div class="successAlertText"></div>
+									</div>
+									<!-- Alert messages ends-->
+									<div class="beg-col col-lg-12 col-md-12 col-sm-12">
+										<div class="beg-col col-md-4 col-lg-4 col-sm-4">
+											<div class="acc-dd acc-col-1">
+												<div class="type" id="Report_type"
+													data-i18n="translation.Report_type"></div>
+												<div class="cs-options cs-op-wid"
+													id="manage_automated_option">
+													<div class="cs-placeholder">
+														<span class="cs-title" id="repTypeSelect"
+															data-i18n="translation.repTypeSelect"></span> <img
+															class="cs-arrow-dn" src="img/arrow_dwn.png"
+															style="display: block;"> <img class="cs-arrow-up"
+															src="img/arrow_up.png" style="display: none;">
+													</div>
+													<ul class="cs-option-ul" id="cs-option-ul_reportType">
+														<li data-option=""
+															data-value="Reserved ESIM Profile Report"
+															class="cs-option" id="reportTypeOption1"
+															onclick="chooseProfileType(this.id)"><span
+															data-i18n="translation.reportType2"></span></li>
+														<li data-option=""
+															data-value="Available ESIM Profile Report"
+															class="cs-option" id="reportTypeOption2"
+															onclick="chooseProfileType(this.id)"><span
+															data-i18n="translation.reportType3"></span></li>
+														<li data-option=""
+															data-value="Unconfirmed ESIM Profile Download Report"
+															class="cs-option" id="reportTypeOption3"
+															onclick="chooseProfileType(this.id)"><span
+															data-i18n="translation.reportType4"></span></li>
+														<li data-option=""
+															data-value="ESIM Profile Download Status Report"
+															class="cs-option" id="reportTypeOption4"
+															onclick="chooseProfileType(this.id)"><span
+															data-i18n="translation.reportType5"></span></li>
+													</ul>
+												</div>
+												<select class="cs-default" id="acc-profile-dd">
+													<option id="repTypeSelect" class="topnav_lbl"></option>
+													<option id="rep_type_Utilized" class="topnav_lbl"
+														data-i18n="translation.reportType2">
+													</option>
+													<option id="rep_type_Available" class="topnav_lbl"
+														data-i18n="translation.reportType3">
+													</option>
+													<option id="rep_type_Ready" class="topnav_lbl"
+														data-i18n="translation.reportType4">
+													</option>
+													<option id="rep_type_Profile" class="topnav_lbl"
+														data-i18n="translation.reportType5">
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div
+										class="beg-col end-col col-lg-12 col-sm-12 col-md-12 acc-dd acc-col-1 acc-noshow-acc1">
+										<div class="beg-col col-lg-4 col-md-4 col-sm-4">
+											<div class="type" id="Report_frequency"
+												data-i18n="translation.Report_frequency"></div>
+											<div class="cs-options cs-op-wid btn_disabled"
+												id="acc-col-1-fre">
+												<div class="cs-placeholder">
+													<span class="cs-title" id="repFreqSelect"></span> <img
+														class="cs-arrow-dn" src="/img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="/img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul" id="cs-option-ul_subscriptionType">
+													<li data-option="" data-value="Daily" class="cs-option"
+														id="repFreqOption1" data-i18n="translation.daily"></li>
+													<li data-option="" data-value="Weekly" class="cs-option"
+														id="repFreqOption2" data-i18n="translation.weekly"></li>
+													<li data-option="" data-value="Monthly" class="cs-option"
+														id="repFreqOption3" data-i18n="translation.monthly"></li>
+												</ul>
+											</div>
+											<select class="cs-default">
+												<option id="rep_type_daily" class="topnav_lbl"
+													data-i18n="translation.daily"></option>
+												<option id="rep_type_weekly" class="topnav_lbl"
+													data-i18n="translation.weekly"></option>
+												<option id="rep_type_monthly" class="topnav_lbl"
+													data-i18n="translation.monthly"></option>
+											</select>
+										</div>
+										<div
+											class="col-lg-4 col-md-4 col-sm-4 end-col Report_Margin date_Section acc-show-acc1"
+											id="r_date" style="padding-top: 2px;">
+											<div class="type acc-col-2 margin-date" id="Report_date"
+												data-i18n="translation.Report_date"></div>
+											<div class="margin-date">
+												<input type="text" id="Rep_date"
+													class=" date-icon-class dateClass acc-col-2 btn_disabled"
+													placeholder="05/02/2016">
+											</div>
+										</div>
+										<div
+											class="time-accordion1 beg-col col-lg-4 col-md-4 col-sm-4 end-col Report_Margin time_Section acc-show-acc1"
+											id="timesec_accordion">
+											<div class="type acc-col-3" id="Report_time"
+												data-i18n="translation.Report_time"></div>
+											<div class="acc-dd acc-col-3 acc-show-acc1 " id="Rep_time">
+												<div class="cs-options btn_disabled" id="acc-col-1-fre">
+													<div class="cs-placeholder">
+														<span class="cs-title" id="repFreqTimeSelect"></span>
+														<img class="cs-arrow-dn" src="img/arrow_dwn.png" style="">
+														<img class="cs-arrow-up" src="img/arrow_up.png"
+															style="display: none;">
+													</div>
+													<ul class="cs-option-ul" id="cs-option-ul_Time">
+														<li data-option="" data-value="Morning" class="cs-option"
+															id="repFreqTimeOption1"
+															data-i18n="translation.repFreqTimeOption12"></li>
+														<li data-option="" data-value="Evening"
+															class="cs-option cs-selected" id="repFreqTimeOption2"
+															data-i18n="translation.repFreqTimeOption22"></li>
+													</ul>
+												</div>
+												<select class="cs-default">
+													<option id="rep_type_morning" class="topnav_lbl"
+														data-i18n="translation.repFreqTimeOption12"></option>
+													<option id="rep_type_evening" class="topnav_lbl"
+														data-i18n="translation.repFreqTimeOption22"></option>
+												</select>
+											</div>
+										</div>
+										<div class="beg-col col-lg-4 col-md-4 col-sm-4"
+											id="acc2_no_of_days">
+											<div class="type acc-col-1 acc-show-acc1" id="Report_no_days"
+												data-i18n="translation.Report_no_days"></div>
+											<input id="rep_days"
+												class="acc-col-1 acc-show-acc1 btn_disabled" type="number"
+												min="1" max="180" value="1">
+											<div class="content-text acc-col-1 acc-show-acc1"
+												id="dateLimit" data-i18n="translation.dateLimit"></div>
+										</div>
+										<div
+											class="beg-col col-lg-12 col-sm-12 col-md-12 radio-noclick  acc-col-1 acc-show-acc1"
+											id="buttons_section_accor">
+											<div class="type" id="Report_Format"
+												data-i18n="translation.Report_Format"></div>
+											<input class="radioInput btn_disabled" type="radio"
+												id="csv-radio" name="imgsel" value="" checked="checked">
+											<label class="radio-label repTypeSelect btn_disabled"
+												for="csv-radio" id="CSV" data-i18n="translation.CSV">
+											</label> <input class="radioInput btn_disabled " type="radio"
+												id="xml-radio" name="imgsel" value="" checked="checked">
+											<label class="radio-label btn_disabled" for="xml-radio"
+												id="XML" data-i18n="translation.XML"> </label> <input
+												class="radioInput btn_disabled " type="radio"
+												id="both-radio" name="imgsel" value="" checked="checked">
+											<label class="radio-label btn_disabled" for="both-radio"
+												id="both" data-i18n="translation.both"></label>
+										</div>
+										<div
+											class="col-lg-8 col-sm-8 col-md-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 "
+											id="buttons_note_accordion1"
+											style="margin-left: 0px; width: 100%;">
+											<ul class="setting_button_ul">
+												<li style="display: inline;">
+													<button class="custombutton acc-show-acc1 repTypeSelect"
+														id="low_note_edit_report"
+														data-i18n="translation.low_note_edit"
+														style="display: inline-block;"></button>
+												</li>
+												<li class="setting_button_il" id="low_note_apply_li">
+													<button class="custombutton " id="low_note_apply"
+														data-i18n="translation.low_note_apply"
+														style="margin: 0px;"></button>
+												</li>
+												<li class="setting_button_il">
+													<button class="custombutton negbutton" id="low_note_reset"
+														data-i18n="translation.low_note_reset"
+														style="margin: 0px;"></button>
+												</li>
+												<li class="setting_button_il">
+													<button class="custombutton negbutton acc-show-acc1"
+														id="low_note_cancel_report"
+														data-i18n="translation.low_note_cancel_report"
+														style="margin: 0px;"></button>
+												</li>
+												<li class="setting_button_il" id="switch1_li"><span
+													id="note-stop1_tab" data-i18n="translation.toggle_note2"
+													style="display: inline-block;"></span></li>
+												<li class="setting_button_il"><label id="toggleswitch1"
+													class="css-switch" style="display: inline-block;">
+														<input type="checkbox" class="css-switch-check"
+														id="toggleLabel1" disabled> <span class="css-switch-label"></span>
+														<span class="css-switch-handle"></span>
+												</label></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--end .accordion-section-content-->
+							</div>
+							<!--end .accordion-section-->
+							<div class="accordion-section" id="acc-2">
+								<a class="accordion-section-title" href="#accordion-2"
+									id="lowSIMConfigAnchor"><span id="manageLowStock"
+									data-i18n="translation.manageLowStock"></span><img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"><img
+									class="acc-arrow-up" id="" src="img/arrow_up.png"> <img
+									id="settings-accordion2" class="acc-icon"
+									data-modal-id="popup3" src="img/settings.png"> <img
+									id="email-accordion2" class="acc-icon" data-modal-id="popup2"
+									src="img/registered-email-address.png"> </a>
+								<div id="accordion-2" class="accordion-section-content"
+									style="display: none;">
+									<div class="acc-part-1" id="accor-part1">
+										<!-- Alert messages-->
+										<div class="error-alert-box alert errorAlert" id="errorLowSIM">
+											<div class="alertText titleText wrapText">
+												<div class="newSubAlertText confirmationDownload"
+													id="alertLowSIM_error"></div>
+											</div>
+											<div class="alertText"></div>
+										</div>
+										<div class="email_successAlert email_alert" id="successLowSIM">
+											<div
+												class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+												id="alertLowSIM_success"></div>
+										</div>
+									
+										<!-- Alert messages ends-->
+										<div class="beg-col col-lg-6 col-sm-6 col-md-6 acc-col-1">
+											<div class="type" id="stock_note_email"
+												data-i18n="translation.stock_note_email"></div>
+											<input class="" type="email" id="email_notify"
+												placeholder="xyz@vodafone.com" />
+										</div>
+										<div class="beg-col col-lg-1 col-md-1 col-sm-1">
+											<button class="custombutton" id="Add_email"
+												data-i18n="translation.Add_email"></button>
+										</div>
+										<div
+											class="beg-col col-lg-12 col-md-12 col-sm-12 instruction-text instruction-textEmail"
+											id="note_1" data-i18n="translation.note1">
+											<span id="note1"></span><br> <span id="note2"
+												data-i18n="translation.note2"></span>
+										</div>
+									</div>
+									<div class="acc-part-2 beg-col col-lg-12 col-sm-12 col-md-12">
+										<div class="warning-alert-box alert warning" id="lowStockConfig_warning">
+											<div class="alertText titleText wrapText">
+												<div class="newSubAlertText confirmationDownload"
+												id="lowStockConfig_apply" data-i18n="translation.low_stock_configChange">
+												</div>
+											</div>
+										</div>
+										<div class="warning-alert-box alert warning" id="lowStock_threshold_warning">
+											<div class="alertText titleText wrapText">
+												<div class="newSubAlertText confirmationDownload"
+												id="lowStock_threshold_apply" data-i18n="translation.recordBelowThreshold">
+												</div>
+											</div>
+										</div>
+										
+										<div class="beg-col col-lg-4 col-sm-4 col-md-4">
+											<div class="acc-dd acc-col-1">
+												<div class="type" id="Profile_type_option"
+													data-i18n="translation.Profile_type_option"></div>
+												<div class="cs-options btn_disabled"
+													id="prof_placeholder_opt">
+													<div class="cs-placeholder" id="prof_placeholder">
+														<span class="cs-title" id="profTypeSelect" data-i18n="translation.repTypeSelect"></span><img
+															class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+															class="cs-arrow-up" src="img/arrow_up.png">
+													</div>
+													<ul class="cs-option-ul" id="cs-option-ul_profileType">
+													</ul>
+												</div>
+												<select class="cs-default">
+													<option id="profile_type_all"
+														data-i18n="translation.profile_all"></option>
+													<option id="profile_type_all"
+														data-i18n="translation.profile_post"></option>
+													<option id="profile_type_all"
+														data-i18n="translation.PrePay"></option>
+												</select>
+											</div>
+											</div>
+										<div class="beg-col col-lg-12 col-sm-12 col-md-12 acc-noshow-acc2" id= 'profile-configuration'>
+											<div class="beg-col col-lg-4 col-sm-4 col-md-4">
+											<div class="acc-col-1">
+												<div class="type" id="Thrshld_option"
+													data-i18n="translation.Thrshld_option"></div>
+												<input type="text" id="thrshld_days" placeholder="0"
+													class="btn_disabled">
+											</div>
+										</div>
+										<div class="row beg-col col-lg-12 col-sm-12 col-md-12"
+											id="row_frequency">
+											<div class="beg-col col-lg-4 col-sm-4 col-md-4">
+												<div class="acc-dd acc-col-1">
+													<div class="type" id="Report_frequency_next"
+														data-i18n="translation.Report_frequency_next"></div>
+
+													<div class="cs-options btn_disabled"
+														id="Report_frequency_opt">
+														<div class="cs-placeholder">
+															<span class="cs-title" id="repFreqSelect_next" data-i18n="translation.repTypeSelect"></span>
+															<img class="cs-arrow-dn" src="img/arrow_dwn.png"> <img
+																class="cs-arrow-up" src="img/arrow_up.png">
+														</div>
+														<ul class="cs-option-ul"
+															id="cs-option-ul_subscriptionType_next">
+															<li data-option="" data-value="Daily" class="cs-option"
+																id="repFreqNextOption1" data-i18n="translation.daily"
+																onClick='selectFrequencyType(this.id)'><span></span>
+															</li>
+															<li data-option="" data-value="Weekly" class="cs-option"
+																id="repFreqNextOption2" data-i18n="translation.weekly"
+																onClick='selectFrequencyType(this.id)'><span></span>
+															</li>
+															<li data-option="" data-value="Monthly" class="cs-option"
+																id="repFreqNextOption3" data-i18n="translation.monthly"
+																onClick='selectFrequencyType(this.id)'><span></span>
+															</li>
+														</ul>
+													</div>
+													<select class="cs-default">
+														<option id="rep_type_daily_next"
+															data-i18n="translation.daily"></option>
+														<option id="rep_type_weekly_next"
+															data-i18n="translation.weekly"></option>
+														<option id="rep_type_monthly_next"
+															data-i18n="translation.monthly"></option>
+													</select>
+												</div>
+											</div>
+											<div class="beg-col report col-lg-4 col-sm-4 col-md-4"
+												id="Report_date_class">
+												<div class="type acc-col-2 margin-date2" id="Report_date_1"
+													data-i18n="translation.Report_date_1"></div>
+												<div class="type acc-col-2" id="Report_time_1"
+													data-i18n="translation.Report_time_1"></div>
+												<input type="text" id="Rep_date_1"
+													class="date-icon-class dateClass acc-col-2 btn_disabled margin-date2"
+													placeholder="dd/mm/yyyy">
+												<div class="acc-dd acc-col-3 acc-show-acc1 btn_disabled"
+													id="Rep_time_1">
+													<div class="cs-options">
+														<div class="cs-placeholder">
+															<span class="cs-title" id="repFreqTimeSelect1"
+																data-i18n="translation.subTypeSelect"></span> <img
+																class="cs-arrow-dn" src="img/arrow_dwn.png">
+															<img class="cs-arrow-up" src="img/arrow_up.png">
+														</div>
+														<ul class="cs-option-ul" id="cs-option-ul_Time">
+															<li data-option="" data-value="Morning" class="cs-option"
+																id="repFreqTimeOption11"
+																data-i18n="translation.repFreqTimeOption12"><span></span></li>
+															<li data-option="" data-value="Evening"
+																class="cs-option cs-selected" id="repFreqTimeOption21"
+																data-i18n="translation.repFreqTimeOption22"><span></span>
+															</li>
+														</ul>
+													</div>
+													<select class="cs-default">
+														<option id="rep_type_morning1" class="topnav_lbl"
+															data-i18n="translation.repFreqTimeOption12"></option>
+														<option id="rep_type_evening1" class="topnav_lbl"
+															data-i18n="translation.repFreqTimeOption22"></option>
+													</select>
+												</div>
+											</div>
+											<div
+												class="beg-col time-accordion1 report col-lg-4 col-sm-4 col-md-4"
+												id="Report_time_class">
+												<div class="type acc-col-3" id="Report_time_2"
+													data-i18n="translation.Report_time"></div>
+												<div class="acc-dd acc-col-3 acc-show-acc1 btn_disabled"
+													id="Rep_time_2">
+
+													<div class="cs-options">
+														<div class="cs-placeholder">
+															<span class="cs-title" id="repFreqTimeSelect2"
+																data-i18n="translation.subTypeSelect"></span> <img
+																class="cs-arrow-dn" src="img/arrow_dwn.png">
+															<img class="cs-arrow-up" src="img/arrow_up.png">
+														</div>
+														<ul class="cs-option-ul" id="cs-option-ul_Time">
+															<li data-option="" data-value="Morning" class="cs-option"
+																id="repFreqTimeOption12"
+																data-i18n="translation.repFreqTimeOption12"><span></span></li>
+															<li data-option="" data-value="Evening"
+																class="cs-option cs-selected" id="repFreqTimeOption22"
+																data-i18n="translation.repFreqTimeOption22"><span></span>
+															</li>
+														</ul>
+													</div>
+													<select class="cs-default">
+														<option id="rep_type_morning2" class="topnav_lbl"
+															data-i18n="translation.repFreqTimeOption12"></option>
+														<option id="rep_type_evening2" class="topnav_lbl"
+															data-i18n="translation.repFreqTimeOption22"></option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row beg-col col-lg-12 col-sm-12 col-md-12"
+											id="buttons_note">
+											<ul class="setting_button_ul" id="setting_button_ul">
+												<li class="setting_button_il"><button
+														class="custombutton" id="low_note_edit_acc2"
+														data-i18n="translation.low_note_edit_acc2" clicked="no"></button></li>
+												<li class="setting_button_il"><button
+														class="custombutton" id="low_note_apply_acc2"
+														value="Apply" data-i18n="translation.low_note_apply_acc2"></button></li>
+												<li class="setting_button_il"><button
+														class="custombutton negbutton" id="low_note_cancel_acc2"
+														data-i18n="translation.low_note_cancel_acc2"></button></li>
+												<li class="setting_button_il"><span
+													id="note-stop_toggle" data-i18n="translation.toggle_note1"></span></li>
+												<li class="setting_button_il"><label id="toggleswitch2"
+													class="css-switch"> <input type="checkbox"
+														class="css-switch-check" id="toggleLabel2" disabled> <span
+														class="css-switch-label"></span> <span
+														class="css-switch-handle"></span>
+												</label></li>
+											</ul>
+										</div>
+									</div>
+									</div>
+								</div>
+								<!--end .accordion-section-content-->
+							</div>
+							<!--end .accordion-section-->
+							<div class="accordion-section" id="acc-3">
+								<a class="accordion-section-title" href="#accordion-3"><span
+									id="manageCustomerHandouts"
+									data-i18n="translation.manageCustomerHandouts"></span><img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"><img
+									class="acc-arrow-up" id="" src="img/arrow_up.png"> </a>
+								<div id="accordion-3" class="accordion-section-content"
+									style="display: none;">
+									<div class="error-alert-box alert errorAlert" id="contentError">
+										<div class="alertText titleText wrapText">
+											<div class="newSubAlertText confirmationDownload"
+												id="alertTitlecontent_error"></div>
+										</div>
+										<div class="alertText"></div>
+									</div>
+									<div class="email_successAlert email_alert" id="contentSuccess">
+										<div
+											class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+											id="alertTitlecontent_success"></div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-md-4">
+										<div class="acc-dd acc-col-1 manage_cust_template">
+											<div class="type" id="template_type_option"
+												data-i18n="translation.template_type_option"></div>
+											<div class="cs-options" id="temp_placeholder_opt">
+												<div class="cs-placeholder" id="temp_placeholder">
+													<span class="cs-title" id="tempTypeSelect"
+														data-i18n="translation.subTypeSelect"></span> <img
+														class="cs-arrow-dn" src="/img/arrow_dwn.png"> <img
+														class="cs-arrow-up" src="/img/arrow_up.png">
+												</div>
+												<ul class="cs-option-ul" id="cs-option-ul_tempType">
+													<li data-option="" data-value="Activation Code"
+														class="cs-option" id="tempTypeOption1"
+														data-i18n="translation.activationStepper"><span></span></li>
+													<li data-option="" data-value="Confirmation Code"
+														class="cs-option" id="tempTypeOption2"
+														data-i18n="translation.confirmationCodeLabel"><span></span></li>
+													<li data-option="" data-value="SIM Parameters"
+														class="cs-option" id="tempTypeOption3"
+														data-i18n="translation.simParametersList"><span></span></li>
+												</ul>
+											</div>
+											<select class="cs-default" id="acc-template-dd">
+												<option id="temp_type_all"
+													data-i18n="translation.activationStepper"></option>
+												<option id="temp_type_all"
+													data-i18n="translation.confirmationCodeLabel"></option>
+												<option id="temp_type_all"
+													data-i18n="translation.simParameters"></option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-sm-12 col-md-12 acc-noshow-acc3"
+										id="instruct_1">
+										<div
+											class="content-text beg-col end-col col-lg-7 col-md-7 col-sm-7"
+											id="instruction_1">
+											<div class="instruction-template-class" id="inst_activation">
+												<b data-i18n="translation.instruction-template"></b> <br>
+												<span data-i18n="translation.instruction-template-details"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-date"></b><span
+													data-i18n="translation.instruction-template-CurrentDate"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-subscriptionType"></b>
+												<span
+													data-i18n="translation.instruction-template-SelectedStype"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-SIM_Number"></b>
+												<span data-i18n="translation.instruction-template-ICCIDNum"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-Mob_Number"></b>
+												<span data-i18n="translation.instruction-template-MSISDNNum"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-QR_Code"></b><span
+													data-i18n="translation.instruction-template-QRCodeImage"></span><br>
+
+												<b
+													data-i18n="translation.instruction-template-Activation_Code"></b>
+												<span data-i18n="translation.instruction-template-GACode"></span>
+												<br>
+												<span data-i18n="translation.instruction-template-name-inst"></span>
+
+											</div>
+											<div class="instruction-template-class"
+												id="inst_confirmation">
+
+
+												<b data-i18n="translation.instruction-template"></b> <br>
+												<span data-i18n="translation.instruction-template-details"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-date"></b><span
+													data-i18n="translation.instruction-template-CurrentDate"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-subscriptionType"></b>
+												<span
+													data-i18n="translation.instruction-template-SelectedStype"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-SIM_Number"></b>
+												<span data-i18n="translation.instruction-template-ICCIDNum"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-Mob_Number"></b>
+												<span data-i18n="translation.instruction-template-MSISDNNum"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-IMEI"></b><span
+													data-i18n="translation.instruction-template-IMEINum"></span><br>
+												<b data-i18n="translation.instruction-template-EID"></b><span
+													data-i18n="translation.instruction-template-EIDNum"></span><br>
+
+												<b
+													data-i18n="translation.instruction-template-Confirmation_Code"></b>
+												<span data-i18n="translation.instruction-template-CACode"></span>
+												<br>
+												<span data-i18n="translation.instruction-template-name-inst"></span>
+											</div>
+											<div class="instruction-template-class" id="inst_esimDetails">
+												<b data-i18n="translation.instruction-template"></b> <br>
+												<span data-i18n="translation.instruction-template-details"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-date"></b> <span
+													data-i18n="translation.instruction-template-CurrentDate"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-ICCID_Number"></b>
+												<span data-i18n="translation.instruction-template-ICCIDNum"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-ICCID_Barcode"></b>
+												<span
+													data-i18n="translation.instruction-template-barcodeDetails"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-PIN1"></b> <span
+													data-i18n="translation.instruction-template-PIN1num"></span><br>
+
+												<b data-i18n="translation.instruction-template-PIN2"></b> <span
+													data-i18n="translation.instruction-template-PIN2num"></span><br>
+
+												<b data-i18n="translation.instruction-template-PUK1"></b> <span
+													data-i18n="translation.instruction-template-PUK1num"></span>
+												<br> <b
+													data-i18n="translation.instruction-template-PUK2"></b> <span
+													data-i18n="translation.instruction-template-PUK2num"></span>
+												<br>
+												<span data-i18n="translation.instruction-template-name-inst"></span>
+											</div>
+										</div>
+
+										<div class="download_left end-col col-lg-5 col-md-5 col-sm-5"
+											id="download_portion">
+											<a id="downloadtemplate"><button class="custombutton"
+													id="download_temp" data-i18n="translation.download_temp"></button>
+											</a>
+											<div class="content-text" id="note_down"
+												data-i18n="translation.note_down"></div>
+										</div>
+									</div>
+									<div class="col-lg-12 col-md-12 col-sm-12 acc-noshow-acc3"
+										id="acc_noshow">
+										<div class="type" id="select_temp"
+											data-i18n="translation.select_temp"></div>
+										<div class="custom-file-input" id="contentManager">
+											<input type="file" id="uploadFile"> <input
+												type="text" id="selectedFile-txt_1"
+												class="col-lg-6 col-sm-6 col-md-6" readonly>
+											<button id="browsebtn_temp" class="custombutton "
+												data-i18n="translation.browsebtn_temp"></button>
+											<button id="uploadbtn_temp" class="custombutton "
+												data-i18n="translation.uploadbtn_temp"></button>
+										</div>
+									</div>
+									<div
+										class="content-text col-lg-8 col-sm-8 col-md-8 acc-noshow-acc3"
+										id="noteContext" data-i18n="translation.note_2"></div>
+									<div
+										class="col-lg-8 col-sm-8 col-md-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 acc-noshow-acc3"
+										id="select_btns">
+										<a id="previewtemplate"><button id="previewbtn_1"
+												class="custombutton btn_disabled "
+												data-i18n="translation.previewbtn_1" disabled="disabled"></button>
+										</a> <a id="shiftfile">
+											<button id="submitbtn_1" class="custombutton btn_disabled "
+												data-i18n="translation.submitbtn" disabled="disabled"></button>
+										</a>
+									</div>
+
+								</div>
+								<!--end .accordion-section-content-->
+							</div>
+							<!--end .accordion-section-->
+							<div class="accordion-section" id="acc-5">
+								<a class="accordion-section-title" id="accord4"
+									href="#accordion-5"><span id="manageSubtype2"
+									data-i18n="translation.manageSubtype2"> </span><img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"><img
+									class="acc-arrow-up" id="" src="img/arrow_up.png"><img
+									id="email-accordion4" class="acc-icon" data-modal-id="popup17"
+									src="img/notifications.png"></a>
+								<div id="accordion-5" class="accordion-section-content"
+									style="display: none;">
+									<div class="acc-part-1"
+										style="width: 99%; padding-left: 5px; padding-right: 5px;">
+										<div class="col-lg-12 col-sm-12_Spr2 col-md-12 acc-col-1">
+											<button class="custombutton" id="new_subscription_type"
+												data-i18n="translation.new_subscription_type"></button>
+											<div class="type insert_sub_type" id="new_sub_type">
+												<div class="new_subscription_content" id="new_sub_block">
+													<span data-i18n="translation.add_subscription_type"></span><br>
+													<input class="" type="text" id="enter_sub_type"
+														data-i18n="[placeholder]translation.entr_subscription_type" />
+													<button class="custombutton btn_disabled"
+														id="Add_subscription"
+														data-i18n="translation.Add_subscription1"></button>
+													<button class="custombutton negbutton"
+														id="Cancel_subscription"
+														data-i18n="translation.Cancel_subscription"></button>
+													<div class="instruction-text" id="new_subscription_note">
+														<span id="new_sub_note2"
+															data-i18n="translation.new_sub_note2"></span>
+													</div>
+												</div>
+											</div>
+											<div class="email_successAlert email_alert"
+												id="new_subSuccess_block">
+												<div class="email_alertText  email_titleText">
+													<span class="newSubAlertText confirmationDownload"
+														id="successSub"></span>
+												</div>
+											</div>
+											<div class="error-alert-box alert errorAlert"
+												id="new_subError_block">
+												<div class="alertText titleText wrapText">
+													<div class="newSubAlertText confirmationDownload"
+														id="errorSub"></div>
+												</div>
+												<div class="alertText"></div>
+											</div>
+										</div>
+										<div
+											class="col-lg-12 col-sm-12_Spr2 col-md-12 manage_sub_block"
+											id="add_sub_type">
+											<table class="dashboard note-table" id="subscription_table">
+												<thead>
+													<tr>
+														<th id="sub-minus-icon" class="no-sort"></th>
+														<th class="subWidth no-sort"></th>
+														<th id="add_sub_type_section"
+															data-i18n="translation.add_subscription_type"></th>
+														<th data-i18n="translation.Added_date"></th>
+														<th data-i18n="translation.action_txt"></th>
+													</tr>
+												</thead>
+												<tbody id="showSubscriptionlist">
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end .accordion-section-->
+							<div class="accordion-section" id="acc-4">
+								<a class="accordion-section-title" href="#accordion-4"><span
+									id="manageEmailAddress"
+									data-i18n="translation.manageEmailAddress"></span><img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"><img
+									class="acc-arrow-up" id="" src="img/arrow_up.png"><img
+									id="email-accordion3" class="acc-icon" data-modal-id="popup2"
+									src="img/registered-email-address.png"></a>
+								<div id="accordion-4" class="accordion-section-content"
+									style="display: none;">
+									<div class="acc-part-1 acc-4-pad">
+										<div class="error-alert-box alert errorAlert"
+											id="email-error-block">
+											<div class="alertText titleText wrapText">
+												<div class="newSubAlertText confirmationDownload"
+													id="alertErrorInstant"></div>
+											</div>
+											<div class="alertText"></div>
+										</div>
+										<div
+											class="beg-col col-lg-12 col-sm-12_Spr2 col-md-12 acc-col-1">
+											<div class="email_successAlert email_alert"
+												id="email-success-block">
+												<div
+													class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+													id="alertSuccessInstant" data-i18n="translation.success_email_addition"></div>
+											</div>
+											<div class="type" id="new_profile_email"
+												data-i18n="translation.new_profile_email"></div>
+											<div class="beg-col col-sm-6 col-md-6 col-lg-6">
+												<input class="" type="email" id="new_profile_email_notify"
+													data-i18n="[placeholder]translation.new_profile_email_notify" />
+											</div>
+											<div class="col-sm-1 col-lg-1 col-md-1">
+												<button class="custombutton btn_disabled" id="Add_new_email"
+													data-i18n="translation.Add_new_email" disabled="disabled"></button>
+											</div>
+											<div
+												class="beg-col col-sm-12 col-md-12 col-lg-12 instruction-text"
+												id="new_profile_email_note">
+												<span id="new_profile_email_note2"
+													data-i18n="translation.new_profile_email_note2"></span>
+											</div>
+										</div>
+										<div class="beg-col col-lg-1 col-md-1 col-sm-1"></div>
+									</div>
+								</div>
+								<!--end .accordion-section-content-->
+							</div>
+							<!--end .accordion-section-->
+							<div class="accordion-section" id="acc-6">
+								<a class="accordion-section-title" href="#accordion-6"
+									id="fileUploadConfig"> <span id="manageEmailAddress"
+									data-i18n="translation.manageAutmoatedFile"></span> <img
+									class="acc-arrow-dn" id="" src="img/arrow_dwn.png"> <img
+									class="acc-arrow-up" id="" src="img/arrow_up.png"> <img
+									id="email-accordion6" class="acc-icon" data-modal-id="popup2"
+									src="img/registered-email-address.png">
+								</a>
+								<div id="accordion-6" class="accordion-section-content"
+									style="display: none;">
+
+									<div class="acc-part-1 acc-4-pad">
+										<div
+											class="beg-col col-lg-12 col-sm-12_Spr2 col-md-12 acc-col-1">
+											<div class="error-alert-box alert errorAlert"
+												id="email-error-block-upload">
+												<div class="alertText titleText wrapText">
+													<div class="newSubAlertText confirmationDownload"
+														id="alertErrorInstant-upload"></div>
+												</div>
+												<div class="alertText"></div>
+											</div>
+											<div class="email_successAlert email_alert"
+												id="email-success-block-upload">
+												<div
+													class="newSubAlertText confirmationDownload email_alertText email_titleText"
+													id="alertSuccessInstant-upload" data-i18n="translation.success_email_addition">
+												</div>
+											</div>
+
+
+											<div class="type" id="new_profile_email"
+												data-i18n="translation.new_profile_email"></div>
+											<div class="beg-col col-sm-6 col-md-6 col-lg-6">
+												<input class="" type="email" id="email_upload_notify"
+													data-i18n="[placeholder]translation.new_profile_email_notify" />
+											</div>
+
+											<div class="col-sm-1 col-lg-1 col-md-1">
+												<button class="custombutton btn_disabled"
+													id="Add_new_email_upload"
+													data-i18n="translation.Add_new_email"></button>
+											</div>
+											<div
+												class="beg-col col-sm-12 col-md-12 col-lg-12 instruction-text"
+												id="new_profile_email_note">
+												<span id="new_profile_email_note2"
+													data-i18n="translation.new_profile_email_note2"></span>
+											</div>
+										</div>
+
+										<div
+											class="beg-col col-sm-12 col-md-12 col-lg-12 toggle-notification">
+											<div class="notification-label-toggle"
+												data-i18n="translation.oval-sim-stock"></div>
+											<div class="notification-label-toggle">
+												<label id="toggleswitchNotification" class="css-switch"
+													style="display: inline-block;"> <input
+													type="checkbox" class="css-switch-check" id="toggleLabel3">
+													<span class="css-switch-label"></span> <span
+													class="css-switch-handle"></span>
+												</label>
+											</div>
+										</div>
+										<div class="beg-col col-lg-1 col-md-1 col-sm-1"></div>
+
+
+									</div>
+
+								</div>
+								<!--end .accordion-section-content-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Modal start -->
+	<div id="popup" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-stop-notifictns"
+					data-i18n="translation.oval_stop_notifictns"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="stopNotification"
+						data-i18n="translation.stopNotification"></span>
+				</h3>
+				<div class="stopbutton">
+					<button class="custombutton js-modal-close" name="Apply" href="#"
+						id="apply-note" value="" data-i18n="translation.apply_note"></button>
+					<button class="custombutton negbutton js-modal-close" name="Cancel"
+						id="cancel-note" href="#" value=""
+						data-i18n="translation.cancel_note"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Modal-2 Start -->
+	<div id="popup2" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close" class="type"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-reg-mail" data-i18n="translation.oval_reg_mail"></></span>
+			</div>
+			<div class="notifications-sim">
+				<div class="scroll-note scroll-height">
+					<table class="dashboard note-table">
+						<thead>
+							<tr id="bg">
+								<th data-i18n="translation.email_address_txt"></th>
+								<th data-i18n="translation.added_on_txt"></th>
+								<th data-i18n="translation.action_txt"></th>
+							</tr>
+						</thead>
+						<tbody id='emailList'>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!--Modal-2 End -->
+
+	<!--Modal-3 Start -->
+	<div id="popup3" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-not-settings" data-i18n="translation.oval_not_settings"></span>
+			</div>
+			<div class="notifications-sim">
+				<div class="scroll-note">
+					<table class="dashboard note-table" id="note-setting">
+						<thead>
+							<tr id="bg">
+								<th data-i18n="translation.profile_type"></th>
+								<th data-i18n="translation.threshold_value"></th>
+								<th data-i18n="translation.frequency_txt"></th>
+								<th data-i18n="translation.notifi_set_on"></th>
+							</tr>
+						</thead>
+						<tbody id="lowSIMConfig">
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--Modal-3 End -->
+
+	<!--Modal-6 Start -->
+	<div id="popup6" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-sim-stock" data-i18n="translation.oval-sim-stock"></span>
+			</div>
+			<div class="notifications-sim">
+				<div class="scroll-note">
+					<table class="dashboard note-table">
+						<thead>
+							<tr id="bg">
+								<th data-i18n="translation.report_name"></th>
+								<th data-i18n="translation.failure_reason"></th>
+								<th data-i18n="translation.scheduled_date"></th>
+							</tr>
+						</thead>
+						<tbody id="failure_notify">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-6 End -->
+
+	<!--Modal-12 Start -->
+	<div id="popup12" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval_stop_reporting"
+					data-i18n="translation.oval_stop_notifictns"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="stop_report_generation"
+						data-i18n="translation.stop_report_generation"></span>
+				</h3>
+				<div class="stopbutton">
+					<button class="custombutton js-modal-close" href="#" name="Apply"
+						id="report_yes" value="" data-i18n="translation.apply_note"></button>
+					<button class="custombutton negbutton js-modal-close" href="#"
+						name="Cancel" id="report_no" value=""
+						data-i18n="translation.cancel_note"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-12 End -->
+
+	<!--Modal-14 Start -->
+	<div id="popup14" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval_subscription_type"
+					data-i18n="translation.oval_cancel_confirmation"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="confirm_profile_delete"
+						data-i18n="translation.confirm_profile_delete"></span>
+				</h3>
+				<div class="stopbutton button_popup13">
+					<button class="custombutton js-modal-close" name="Apply"
+						id="sub_delete_yes" data-i18n="translation.activation_cancel_yes"></button>
+					<button class="custombutton negbutton js-modal-close" name="Cancel"
+						id="sub_delete_no" data-i18n="translation.activation_cancel_no"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-12 End -->
+
+	<!--Modal-popupSub Start -->
+	<div id="popupSub" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval_subscription_type"
+					data-i18n="translation.oval_cancel_confirmation"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="confirm_subscription_delete"
+						data-i18n="translation.confirm_subscription_delete"></span>
+				</h3>
+				<div class="stopbutton button_popup13">
+					<button class="custombutton js-modal-close" name="Apply"
+						id="subscription_delete_yes"
+						data-i18n="translation.activation_cancel_yes"></button>
+					<button class="custombutton negbutton js-modal-close" name="Cancel"
+						id="subscription_delete_no"
+						data-i18n="translation.activation_cancel_no"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-popupSub End -->
+
+	<div id="popup15" class="modal-box"></div>
+
+	<!--Modal-popup16 Start -->
+	<div id="popup16" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close" 
+				data-i18n="translation.popup_close_mark"></a> <span
+					id="oval_report_config"
+					data-i18n="translation.oval_cancel_confirmation"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="confirm_report_delete"
+						data-i18n="translation.confirm_report_delete"></span>
+				</h3>
+				<div class="stopbutton button_popup13">
+					<button class="custombutton js-modal-close" name="Apply"
+						id="config_delete_yes"
+						data-i18n="translation.activation_cancel_yes"></button>
+					<button class="custombutton negbutton js-modal-close" name="Cancel"
+						id="config_delete_no" data-i18n="translation.activation_cancel_no"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-popup16 END -->
+
+	<div id="popup157" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close" class="type"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-reg-mail"
+					data-i18n="translation.automated_reports_failure"></span>
+			</div>
+			<div class="notifications-sim">
+				<div class="scroll-note scroll-height17">
+					<table class="dashboard note-table">
+						<thead>
+							<tr id="bg">
+								<th data-i18n="translation.report_name"></th>
+								<th data-i18n="translation.errorDescription"></th>
+								<th data-i18n="translation.scheduled_date"></th>
+							</tr>
+						</thead>
+						<tbody id="failureReport">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!--Modal-popup17 Start -->
+	<div id="popup17" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a href="#" class="js-modal-close close" class="type"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval-reg-mail" data-i18n="translation.associate_sub_type"></span>
+			</div>
+			<div class="notifications-sim">
+				<div class="scroll-note scroll-height17">
+					<table class="dashboard note-table">
+						<thead>
+							<tr id="bg">
+								<th data-i18n="translation.Profile_type_option"></th>
+								<th data-i18n="translation.added_on_txt"></th>
+							</tr>
+						</thead>
+						<tbody id="profilelist">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal-popup17 END -->
+
+	<!--Modal END -->
+
+	<script src="/js/custom.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/js/settingConfiguration.js" type="text/javascript"></script>
+	<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="/js/datepicker.js" type="text/javascript" charset="UTF-8"></script>
+
+	<script>
+	  $(document).ready(function() {
+		  function close_accordion_section() {
+			  $('.accordion .accordion-section-title').removeClass('active');
+			  $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+				$(".accordion .accordion-section-title .acc-arrow-up").css("display", "none");
+				$(".accordion .accordion-section-title .acc-arrow-dn").css("display", "block");
+				$("#email-success-block").css("display", "none");
+				$(".insert_sub_type").css("display", "none");
+				$("#new_subSuccess_block").css("display","none");
+			}
+			$('.accordion-section-title').click(function(e) {
+        $('.plus_minus_pos').closest('tr').removeClass("option_active");
+        $('.plus_minus_pos').closest('tr').next().removeClass("next_sub_option_active");
+				// Grab current anchor value
+				var currentAttrValue = $(this).attr('href');
+				if ($(this).is('.active')) {
+				  close_accordion_section();
+				} else {
+				  close_accordion_section();
+					//Add open arrow to the accordion
+					$(this).children(".acc-arrow-dn").css("display", "none");
+				  $(this).children(".acc-arrow-up").css("display", "block");
+					// Add active class to section title
+					$(this).addClass('active');
+					// Open up the hidden content panel
+					$('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+				}
+				e.preventDefault();
+			});
+			$(function() {
+			  if (sessionStorage.getItem("setting_flag") == "true") {
+				  $('.tabs ' + '#tab12').show().siblings().hide();
+					// Change/remove current tab to active
+					$('.tabs .tab-links a').parent('li').addClass('activeTab').siblings().removeClass('activeTab');
+					$('#edit_tag').addClass('activeTab');
+          $("#accord4").children(".acc-arrow-up").css("display", "block");
+					$("#accord4").children(".acc-arrow-dn").css("display", "none");
+					// Add active class to section title
+					$("#accord4").addClass('active');
+					// Open up the hidden content panel
+					$('.accordion ' + "#accordion-5").slideDown(300).addClass('open');
+					sessionStorage.setItem("setting_flag", "none");
+        } else if (sessionStorage.getItem("setting_flag") == "false") {
+				  $('.tabs ' + '#tab12').show().siblings().hide();
+					// Change/remove current tab to active
+					$('.tabs .tab-links a').parent('li').addClass('activeTab').siblings().removeClass('activeTab');
+					$('#edit_tag').addClass('activeTab');
+          $("#accord1").children(".acc-arrow-dn").css("display", "none");
+					$("#accord1").children(".acc-arrow-up").css("display", "block");
+					// Add active class to section title
+					$("#accord1").addClass('active');
+					// Open up the hidden content panel
+					$('.accordion ' + "#accordion-1").slideDown(300).addClass('open');
+					sessionStorage.setItem("setting_flag", "none");
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

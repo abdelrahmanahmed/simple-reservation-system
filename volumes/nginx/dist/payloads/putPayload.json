@@ -1,0 +1,24 @@
+{
+ "ids": [{
+      "$": ""
+  }],
+  "status": {
+	"$": "released"
+  },
+ "details": {
+    "matching-id":"",
+    "confirmation-code": {
+      "$": ""
+    },
+    "confirmation-code-required": true
+  },
+ "parts": {
+    "physical-resource": {
+      "imei": ""
+    },
+    "logical-resource": {
+      "msisdn": "",
+      "eid": ""
+    }
+ }
+}

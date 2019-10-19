@@ -1,0 +1,33 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "^1.19.0",
+    "chai-as-promised": "^7.1.1",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "knex": "^0.19.1",
+    "mock-knex": "^0.4.6",
+    "mysql2": "^1.6.5"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "6.0.2",
+    "nyc": "13.3.0",
+    "rewire": "4.0.1",
+    "sinon": "7.3.1"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "cd migrations && npm i && node . m && npm run run-seed  && cd ..",
+    "test": "nyc --reporter=text mocha src/**/*.spec.js",
+    "test-watch": "mocha src/**/*.spec.js --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}

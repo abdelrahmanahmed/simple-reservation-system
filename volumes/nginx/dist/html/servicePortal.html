@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/css/framework.css" rel="stylesheet" type="text/css">
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<title class="translation" data-i18n="translation.Service_Portal_page"></title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+	name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/i18next-1.8.1.min.js" type="text/javascript"></script>
+</head>
+<body onload="getSessionValue();data();"
+	class="translation errorTranslation">
+	<div class="wrapper">
+		<!-- Main container-->
+		<div class="container">
+			<!--Top Menu-->
+			<div class="topnav col-lg-12 col-md-12 col-sm-12 col-sm-offset-1 ">
+				<div class="rhombus rhombus_top"></div>
+				<img class="vf-logo vf-top" src="img/vf-logo.png"
+					alt="Vodafone logo - home"> <label
+					class="header col-sm-offset-1 header_scroll header_margin"
+					data-i18n="translation.header"> </label>
+				<div class="righttopnav col-sm-offset-1">
+					<label class="topnav_lbl" id="lang"
+						data-i18n="translation.Language"></label>
+					<div class="languageSelector">
+						<div class="cs-options langWidth">
+							<div class="cs-placeholder">
+								<span id="cs-lang-title" class="cs-title"
+									data-i18n="translation.English"></span> <img
+									class="cs-arrow-dn" src="img/arrow_dwn.png" /> <img
+									class="cs-arrow-up" src="img/arrow_up.png" />
+							</div>
+							<ul class="cs-option-ul">
+								<li data-option data-value="1" class="cs-selected cs-option"
+									id="option1" data-i18n="translation.option1"><span></span></li>
+								<li data-option data-value="2" class="cs-option" id="option2"
+									data-i18n="translation.option2"><span></span></li>
+								<li data-option data-value="3" class="cs-option" id="option3"
+									data-i18n="translation.option3"><span></span></li>
+							</ul>
+						</div>
+						<select class="cs-default">
+							<option class="topnav_lbl" value="en" selected="" id="selected1"
+								data-i18n="translation.selected1"></option>
+							<option class="topnav_lbl" value="de" selected="" id="selected2"
+								data-i18n="translation.selected2"></option>
+							<option class="topnav_lbl" value="nl" selected="" id="selected3"
+								data-i18n="translation.selected3"></option>
+						</select>
+					</div>
+					<div class="profile">
+						<label class="topnav_lbl" id="login_msg"><span
+							data-i18n="translation.login_msg"></span><span class="login_name"></span></label>
+						<a class="logoutLink" id="logoutclient" href=""
+							data-i18n="translation.logout"></a>
+					</div>
+				</div>
+			</div>
+			<!--Menu-->
+			<div
+				class="primary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 primary-menu-height"
+				id="primary-menu_scroll ">
+				<ul class="menu">
+					<li class="menu_item menu_item_height" id="home"><img
+						class="menubar_img" alt="Home.png" src="img/Home.png"> <a
+						href="homepage.html" class="menubar_page"
+						data-i18n="translation.Home"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+
+					<li class="menu_item menu_item_height" id="new"><img
+						class="menubar_img" alt="New-Subscription.png"
+						src="img/New-Subscription.png"> <a
+						href="newSubscription.html" class="menubar_page"
+						data-i18n="translation.NewSubscription"></a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height active"
+						onclick="location.href='servicePortal.html'" id="service"><img
+						class="menubar_img" alt="Service-Portal.png"
+						src="img/Service-Portal.png"> <a href="servicePortal.html"
+						class="menubar_page" data-i18n="translation.ServicePortal"> </a></li>
+					<span class="pipe" data-i18n="translation.primary_menu_pipe"></span>
+					<li class="menu_item menu_item_height"
+						onclick="location.href='Admin.html'" id="admin"><img
+						id="menu_admin" class="menubar_img" alt="Admin-portal.png"
+						src="img/Human-black-white-new.png"><a href="Admin.html"
+						class="menubar_page" id="adminHover"
+						data-i18n="translation.AdminPortal"></a> <img id="drop-arrow"
+						class="menubar_img admin_arrow" alt="dropdown-arrow.png"
+						src="img/white-arrow.png"></li>
+					<span class="pipe" id="admin_pipe"
+						data-i18n="translation.primary_menu_pipe"></span>
+				</ul>
+			</div>
+			<div
+				class="secondary-menu col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 secondary-menu-height">
+				<ul class="sec_menu sec_menu_pad">
+					<li class="sec_menu_item"
+						onclick="location.href='SimInventory.html'" id="sim_inv"><img
+						class="sec_menubar_img" alt="Home.png"
+						src="img/secmenu/SIM-Inventory.png"> <a
+						href="SimInventory.html" class="sec_menubar_page"
+						data-i18n="translation.SIM_Inventory"> </a></li>
+
+					<li class="sec_menu_item" onclick="location.href='Reporting.html'"
+						id="reporting"><img class="sec_menubar_img"
+						alt="New-Subscription.png" src="img/secmenu/Reporting.png">
+						<a href="Reporting.html" class="sec_menubar_page"
+						data-i18n="translation.Reporting"></a></li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='UserAccessControl.html'" id="user_access">
+						<img class="sec_menubar_img" alt="user_access.png"
+						src="/img/secmenu/User-Acces-control.png"> <a
+						href="UserAccessControl.html" class="sec_menubar_page"
+						data-i18n="translation.User_Access_Control"> </a>
+					</li>
+
+					<li class="sec_menu_item"
+						onclick="location.href='Settings_Configuration.html'" id="setting">
+						<img class="sec_menubar_img" alt="Admin-portal.png"
+						src="img/secmenu/Setting-&-Configuration.png"><a
+						href="Settings_Configuration.html" class="sec_menubar_page"
+						data-i18n="translation.SettingConfiguration"> </a>
+					</li>
+				</ul>
+			</div>
+			<div
+				class="hometitle title_margin1 col-lg-12 col-md-12 col-sm-11 col-sm-offset-1">
+				<h1 id="currentService" data-i18n="translation.currentService"></h1>
+			</div>
+			<!--Content-->
+			<div
+				class="mainContainer col-lg-12 col-md-12 col-sm-11 col-sm-offset-1 main_container-scroll"
+				id="main_cont_service">
+				<div class="email_successAlert email_alert" id="cancelOrderSuccess">
+					<div class="newSubAlertText confirmationDownload email_alertText  email_titleText"
+					id="cancelOrderSuccessText"></div>
+					<div class="successAlertText"></div>
+				</div>
+				<div class="error-alert-box alert errorAlert">
+					<div class="alertText titleText wrapText">
+						<div class="newSubAlertText confirmationDownload" id="err-title"></div>
+					</div>
+					<div class="alertText"></div>
+				</div>
+				<div class="search-crit ">
+					<div class="search-subheader" id="search"
+						data-i18n="translation.search"></div>
+					<div class="msis beg-col col-lg-3 col-md-3 col-sm-3">
+						<input class="radioInput" type="radio" id="msisdn-radio"
+							name="imgsel" value="msisdn" checked="checked" /> <label
+							class="radio-label radio-checked" for="msisdn-radio" id="MSISDN"
+							data-i18n="translation.MSISDN"></label> <input type="text"
+							id="txt_msisdn" class="radio-text  "
+							data-i18n="[placeholder]translation.txt_msisdn" />
+					</div>
+					<div class="icc col-lg-3 col-md-3 col-sm-3">
+
+						<input type="radio" class="radioInput" id="iccid-radio"
+							name="imgsel" value="iccid" /> <label class="radio-label"
+							for="iccid-radio" id="ICCID" data-i18n="translation.ICCID"></label>
+						<input type="text" id="txt_iccid" class="radio-icc "
+							data-i18n="[placeholder]translation.txt_iccid"
+							data-i18n="translation.txt_iccid" disabled />
+					</div>
+					<div class="col-lg-2 col-sm-2 col-md-2">
+						<div></div>
+						<button class="search-btn  custombutton btn_disabled"
+							name="search" type="submit" id="searchservice"
+							data-i18n="translation.searchservice" disabled="disabled"></button>
+					</div>
+					<div class="content-text col-lg-12 col-md-12 col-sm-12"
+						id="serviceText2">
+						<div class="content-text col-lg-11 col-md-12 col-sm-12_Spr"
+							id="serviceText" data-i18n="translation.serviceText"></div>
+					</div>
+				</div>
+
+				<div class="noResult col-lg-12 col-md-12 col-sm-12" id="noResult"
+					style="display: none"></div>
+				<div class="searchResult" id="searchResult" style="display: none">
+					<div class="servbox beg-col col-lg-12 col-md-12 col-sm-12_Spr2"
+						id="servbox_result">
+						<label data-i18n="translation.servbox"></label><span class="serv"></span>
+					</div>
+					<div class="pagination beg-col col-lg-12 col-md-12 col-sm-12">
+						<label data-i18n="translation.show"></label> <select
+							id="optionselector" class="optionselector">
+						</select> <label data-i18n="translation.of"></label> <label
+							id="numberofrecords"></label> <label
+							data-i18n="translation.records"></label>
+						<div class="pagination-arrows">
+						</div>
+					</div>
+					<div class="records">
+						<div class="agentName-tt"></div>
+						<div class="agentName-dis-arrow">
+							<img src="/img/hover-triangle.png">
+						</div>
+						<div class="imei-tt"></div>
+						<div class="imei-dis-arrow">
+							<img src="/img/hover-triangle.png">
+						</div>
+						<div class="action-ovl">
+							<div class="action-item" id="action_cancel" data-modal-id="popup18" data-i18n="translation.pushNo"></div>
+							<div class="regenarate_code_action"
+								data-i18n="translation.RegenerateActivationCode"></div>
+							<div class="regenarate_code_action"
+								data-i18n="translation.RegenerateConfirmationCode"></div>
+						</div>
+						<table class="dashboard" id="table_service-portal">
+							<thead>
+								<tr class="table-header" style="word-break: break-word">
+									<th class="" data-i18n="translation.ICCID"></th>
+									<th class="" data-i18n="translation.EID"></th>
+									<th class="imei-col"></th>
+									<th class="" data-i18n="translation.label_Device_Type"></th>
+									<th data-i18n="translation.label_Status"></th>
+									<th class="" data-i18n="translation.label_Channel"></th>
+									<th class="" id="actionDate" data-i18n="translation.actionDate"></th>
+									<th id="action_service" data-i18n="translation.action"></th>
+								</tr>
+							</thead>
+							<tbody id="table-body">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- overlay 10 -->
+	<div id="popup18" class="modal-box">
+		<div class="modal-body">
+			<div class="type ovl-header">
+				<a class="js-modal-close close" href="#"
+					data-i18n="translation.popup_close_mark"></a> <span
+					id="oval_cancel_confirmation"
+					data-i18n="translation.oval_cancel_confirmation"></span>
+			</div>
+			<div class="notifications-sim">
+				<h3 class="type">
+					<span id="getEsim_activation_cancel"
+					data-i18n="translation.confirmCancelOrder"></span>
+				</h3>
+				<div class="stopbutton" id="button_popup13">
+					<button class="custombutton js-modal-close" name="Apply"
+					id="cancel_request_yes"
+						data-i18n="translation.activation_cancel_yes"
+						></button>
+					<button class="custombutton negbutton js-modal-close"
+						name="Cancel" id="activation_cancel_no"
+						data-i18n="translation.activation_cancel_no"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/custom.js" type="text/javascript"></script>
+	<script src="/js/custom-sim-reporting.js" type="text/javascript"></script>
+	<script src="/js/custom-pagination.js" type="text/javascript"></script>
+	<script>
+		$(window).bind("pagehide", function() {
+			$("#msisdn-radio").prop("checked", true);
+			$("#txt_msisdn").val("");
+			$("#txt_iccid").val("");
+			//Checking if the browser is firefox
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+			if(isFirefox){
+			  window.onunload = function(){};
+			  $("#txt_msisdn").attr("disabled", false);
+			  $("#txt_iccid").attr("disabled", true);
+			}
+		});
+	</script>
+
+</body>
+</html>

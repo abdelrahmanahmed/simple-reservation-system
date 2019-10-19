@@ -1,0 +1,6 @@
+README.md
+node_modules
+migrations
+.gitignore
+.nyc_output
+coverage

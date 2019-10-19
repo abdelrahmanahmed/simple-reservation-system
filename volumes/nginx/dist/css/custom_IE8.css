@@ -1,0 +1,1899 @@
+/*framework*/
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3,
+	.col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+	float: left
+}
+
+.col-lg-12 {
+	width: 100%
+}
+
+.col-lg-11 {
+	width: 91.57894736842105%
+}
+
+.col-lg-10 {
+	width: 83.33333333%
+}
+
+.col-lg-9 {
+	width: 74.73684210526316%
+}
+
+.col-lg-8 {
+	width: 66.31578947368421%
+}
+
+.col-lg-7 {
+	width: 57.89473684210526%
+}
+
+.col-lg-6 {
+	width: 49.47368421052632%
+}
+
+.col-lg-5 {
+	width: 41.05263157894737%
+}
+
+.col-lg-4 {
+	width: 32.63157894736842%
+}
+
+.col-lg-3 {
+	width: 24.21052631578947%
+}
+
+.col-lg-2 {
+	width: 15.78947368421053%
+}
+
+.col-lg-1 {
+	width: 7.368421052631579%
+}
+
+.col-lg-pull-12 {
+	right: 100%
+}
+
+.col-lg-pull-11 {
+	right: 91.57894736842105%
+}
+
+.col-lg-pull-10 {
+	right: 83.33333333%
+}
+
+.col-lg-pull-9 {
+	right: 74.73684210526316%
+}
+
+.col-lg-pull-8 {
+	right: 66.31578947368421%
+}
+
+.col-lg-pull-7 {
+	right: 57.89473684210526%
+}
+
+.col-lg-pull-6 {
+	right: 49.47368421052632%
+}
+
+.col-lg-pull-5 {
+	right: 41.05263157894737%
+}
+
+.col-lg-pull-4 {
+	right: 32.63157894736842%
+}
+
+.col-lg-pull-3 {
+	right: 24.21052631578947%
+}
+
+.col-lg-pull-2 {
+	right: 15.78947368421053%
+}
+
+.col-lg-pull-1 {
+	right: 7.368421052631579%
+}
+
+.col-lg-pull-0 {
+	right: auto
+}
+
+.col-lg-push-12 {
+	left: 100%
+}
+
+.col-lg-push-11 {
+	left: 91.57894736842105%
+}
+
+.col-lg-push-10 {
+	left: 83.33333333%
+}
+
+.col-lg-push-9 {
+	left: 74.73684210526316%
+}
+
+.col-lg-push-8 {
+	left: 66.31578947368421%
+}
+
+.col-lg-push-7 {
+	left: 57.89473684210526%
+}
+
+.col-lg-push-6 {
+	left: 49.47368421052632%
+}
+
+.col-lg-push-5 {
+	left: 41.05263157894737%
+}
+
+.col-lg-push-4 {
+	left: 32.63157894736842%
+}
+
+.col-lg-push-3 {
+	left: 24.21052631578947%
+}
+
+.col-lg-push-2 {
+	left: 15.78947368421053%
+}
+
+.col-lg-push-1 {
+	left: 7.368421052631579%
+}
+
+.col-lg-push-0 {
+	left: auto
+}
+
+.col-lg-offset-12 {
+	margin-left: 100%
+}
+
+.col-lg-offset-11 {
+	margin-left: 91.57894736842105%
+}
+
+.col-lg-offset-10 {
+	margin-left: 83.33333333%
+}
+
+.col-lg-offset-9 {
+	margin-left: 74.73684210526316%
+}
+
+.col-lg-offset-8 {
+	margin-left: 66.31578947368421%
+}
+
+.col-lg-offset-7 {
+	margin-left: 57.89473684210526%
+}
+
+.col-lg-offset-6 {
+	margin-left: 49.47368421052632%
+}
+
+.col-lg-offset-5 {
+	margin-left: 41.05263157894737%
+}
+
+.col-lg-offset-4 {
+	margin-left: 32.63157894736842%
+}
+
+.col-lg-offset-3 {
+	margin-left: 24.21052631578947%
+}
+
+.col-lg-offset-2 {
+	margin-left: 15.78947368421053%
+}
+
+.col-lg-offset-1 {
+	margin-left: 7.368421052631579%
+}
+
+.col-lg-offset-0 {
+	margin-left: auto
+}
+
+/*Common Template elements*/
+.wrapper {
+	position: relative;
+	min-height: 665px;
+	overflow: hidden;
+}
+
+.mainContainer {
+	float: left;
+	margin-bottom: 85px;
+}
+
+input {
+	font-size: 12px;
+	padding: 6px 10px;
+}
+
+.rhombus {
+	left: -2087px;
+	top: 64px;
+	height: 40px;
+	width: 2027px;
+	background-color: #e60000;
+	position: absolute;
+	z-index: 1;
+}
+
+.rhombus:before {
+	top: -1698px;
+	content: '.';
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-bottom: 1700px solid #e60000;
+	border-right: 1930px solid transparent;
+	position: absolute;
+	left: 139px;
+}
+
+.rhombus:after {
+	top: 40px;
+	content: '.';
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-top: 1999px solid #e60000;
+	border-right: 1900px solid transparent;
+	position: absolute;
+	left: 165px;
+}
+
+.vf-logo {
+	top: 53px;
+	left: -71px;
+	width: 60px;
+	position: absolute;
+	z-index: 100;
+}
+
+/*Top nav menu*/
+.header {
+	vertical-align: bottom;
+	margin-top: 24px;
+	font-size: 30px;
+	color: #e60000;
+	font-family: Vodafone Rg, sans-serif;
+	font-weight: bold;
+}
+
+.topnav {
+	margin-top: 10px;
+}
+
+.languageSelector {
+	font-family: Vodafone Rg, sans-serif;
+	color: #333333;
+	display: inline-block;
+	margin-left: 0%;
+	margin-right: 30px;
+	font-size: 14px;
+}
+
+.languageSelector  .cs-title, .languageSelector .cs-options {
+	font-family: Vodafone Rg;
+	font-size: 14px;
+}
+
+.languageSelector .cs-option {
+	padding: 7px;
+}
+
+.lang {
+	margin-left: 15px;
+	margin-right: 50px;
+}
+
+.topnav_lbl {
+	font-family: Vodafone Rg;
+	font-weight: normal;
+	color: #333333;
+	font-size: 14px;
+	margin-right: 11px;
+}
+
+.profile {
+	font-family: Vodafone Rg;
+	color: #333333;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.logoutLink {
+	margin-left: 20px;
+	font-family: Vodafone Rg, sans-serif;
+	color: #333333;
+	font-size: 14px;
+}
+
+.profileimg {
+	vertical-align: middle;
+	border: 1px solid darkgrey;
+}
+
+.righttopnav {
+	float: right;
+	display: inline-block;
+}
+
+/*Primary Menu*/
+.primary-menu {
+	border-radius: 3px;
+	background-color: #E60000;
+	margin-top: 20px;
+	height: 45px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+	padding: 0;
+	list-style: none;
+}
+
+.menu_item {
+	padding: 11px 0 0 0;
+	height: 34px;
+	float: left;
+	cursor: pointer;
+	background-color: rgb(230, 0, 0);
+}
+
+.menu_item_active {
+	background-color: #BD0000;
+}
+
+.pipe {
+	font-size: 27px;
+	padding: 6px 0 8px 0;
+	color: white;
+	float: left;
+	width: 4px;
+}
+
+.menubar_page {
+	color: white;
+	text-decoration: none;
+	font-family: Vodafone Rg, sans-serif;
+	font-size: 16px;
+	padding-right: 8px;
+}
+
+.menubar_img {
+	padding-left: 10px;
+	padding-right: 4px;
+}
+
+.admin_arrow {
+	padding-right: 10px;
+	padding-left: 0px;
+}
+
+li.menu_item:hover {
+	background-color: #BD0000;
+}
+
+.active {
+	background-color: #BD0000;
+}
+
+/*Secondary Menu*/
+.secondary-menu {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	border-radius: 3px;
+	background-color: #F4F4F4;
+	display: none;
+	height: 49px;
+}
+
+.sec_menu {
+	padding: 10px;
+	margin: 0px;
+	list-style: none;
+}
+
+.sec_menu_item {
+	border-radius: 3px;
+	margin: 0 5px;
+	padding: 4px 0 0 10px;
+	height: 25px;
+	float: left;
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Vodafone Rg;
+	font-size: 14px;
+}
+
+.sec_menu_item_active {
+	border-radius: 3px;
+	background-color: #cccccc;
+}
+
+.sec_menubar_page {
+	padding: 0 10px;
+	font-size: 14px;
+	font-family: Vodafone Rg;
+	text-decoration: none;
+	color: black;
+}
+
+.sec_menubar_img {
+	vertical-align: middle;
+}
+
+/*Breadcrumb*/
+.breadcrumb {
+	margin-top: 20px;
+}
+
+.breadcrumb ul li, .breadcrumb ul li.sel {
+	list-style: none;
+	background: 0 0;
+	padding-left: 0;
+	float: left;
+	.
+}
+
+.breadcrumb ul {
+	padding: 0px;
+}
+
+.bcs {
+	padding: 0;
+}
+
+.sel {
+	font-size: 14px;
+	color: #000000;
+}
+
+.current {
+	text-decoration: none;
+	font-size: 14px;
+	color: #000000;
+}
+
+.title {
+	border-bottom: solid 1px #999999;
+	margin-top: -2px;
+}
+
+.hometitle {
+	border-bottom: none;
+	margin-top: -2px;
+}
+
+/*Footer*/
+footer {
+	bottom: 0;
+	position: absolute;
+	left: 0;
+	border-radius: 0;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	width: 100%;
+	color: white;
+	font-size: 12px;
+	background-color: #2e2e2e;
+	padding: 22px 0px;
+}
+
+.footer {
+	width: 100%;
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+@media ( max-width :992px) {
+	.footer {
+		width: 715px;
+	}
+}
+
+/*Form elements*/
+.custombutton {
+	cursor: pointer;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+	border: 1px solid transparent;
+	height: 39px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #9C2AA0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 3px;
+}
+
+.cs-option {
+	padding: 10px;
+	list-style: none;
+	cursor: pointer
+}
+
+.cs-options {
+	background-size: 22px;
+	background-position: 157px 10px;
+	background-repeat: no-repeat;
+	box-shadow: 0 1px 3px rgba(00, 0, 0, 0.60);
+	font-family: Vodafone Rg;
+	font-size: 16px;
+}
+
+.cs-options-open {
+	background-image: url('/img/arrow_up.png');
+}
+
+ul .cs-option-seen {
+	display: block
+}
+
+.cs-placeholder {
+	cursor: pointer;
+	padding: 4px 3px 1px 8px;
+}
+
+.cs-disabled {
+	padding: 4px 3px 1px 8px;
+	cursor: auto;
+	opacity: 0.4;
+}
+
+.cs-default {
+	display: none;
+}
+
+.cs-selected {
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.cs-option-ul {
+	padding: 0px;
+	background-color: white;
+	z-index: 10;
+	width: 182px;
+	position: absolute;
+	box-shadow: 0 1px 3px rgba(00, 0, 0, 0.65);
+	max-height: 185px;
+	overflow-y: scroll;
+	display: none;
+}
+
+.cs-arrow-dn, .cs-arrow-up {
+	width: 22px;
+	vertical-align: middle;
+	border-left: 1px solid #cccccc;
+	padding: 0 0 0 5px;
+}
+
+.cs-arrow-up {
+	display: none
+}
+
+.cs-title {
+	padding: 0 5px 0 0;
+}
+
+input[type="text"], textarea, input[type="password"] {
+	border-radius: 5px;
+	border: 2px solid #FFFFFF;
+	box-shadow: 0 1px 2px rgba(00, 0, 0, 0.65) inset;
+	height: 20px;
+	font-size: 16px;
+	padding: 10px 14px;
+	color: #333333;
+	margin: 10px 0;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus {
+	outline: none !important;
+	border: 2px solid #428600;
+}
+
+.required {
+	margin: 0 -4px;
+	color: red
+}
+
+.form_lbl {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.input-error {
+	outline: none !important;
+	border: 2px solid #e60000;
+}
+
+.fm-error {
+	display: none;
+	padding: 10px 0;
+	background-color: #fef0f0;
+	color: #e60000;
+	border: 1px solid #e60000;
+	border-radius: 0px;
+	align-content: center;
+	text-align: center;
+	z-index: 100;
+}
+
+.errorMessage {
+	margin: 0px;
+	display: inline-block;
+}
+
+.i-error-sml {
+	vertical-align: middle;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	background-image: url('/img/alert/error-icon.png');
+	background-repeat: no-repeat;
+}
+
+.errorMessage:after {
+	top: 33px;
+	content: ' ';
+	border-width: 7px;
+	background-repeat: no-repeat;
+	left: -236px;
+	padding-top: 0px;
+	padding-right: 14px;
+	padding-bottom: 4px;
+	padding-left: 16px;
+	position: relative;
+	background: url('/img/error-arrow2-png.png');
+	background-repeat: no-repeat;
+}
+
+.radio-label {
+	font-weight: bold;
+	font-size: 16px;
+	background: url("/img/forms/radio-button-grey-circle.png");
+	background-repeat: no-repeat;
+	padding: 3px 0px 0 36px;
+	color: #6d6d6d;
+	color: #333333;
+	background-position: 0, 0;
+}
+
+.radio-checked {
+	background: url("/img/forms/radio-button-selected.png");
+	background-repeat: no-repeat;
+	padding: 3px 0px 0 36px;
+	background-position: 0, 0;
+}
+
+.radioInput, .checkInput {
+	left: -9999em;
+	position: absolute;
+}
+
+.check-label {
+	font-size: 16px;
+	background-image: url("/img/forms/check-box.png");
+	background-repeat: no-repeat;
+	padding: 3px 0px 0 28px;
+	color: #6d6d6d;
+	background-position: 0, 0;
+}
+
+.check-checked {
+	background-image: url("/img/forms/Check-box-selected-with-tick.png");
+	background-repeat: no-repeat;
+	padding: 3px 0px 0 28px;
+	color: #6d6d6d;
+	background-position: 0, 0;
+}
+
+fieldset {
+	padding: .35em .625em .75em;
+	margin: 0 2px;
+	border: none;
+}
+
+.errorAlert {
+	border: 1px solid #e60000;
+	background-color: #fef0f0;
+}
+
+.warning {
+	border: 1px solid #ff5400;
+	background-color: #fff5f0;
+}
+
+.successAlert {
+	border: 1px solid #428600;
+	background-color: #f4f8f0;
+}
+
+.alert {
+	border-radius: 3px;
+	margin: 0 0 28px 0;
+}
+
+.alertText {
+	margin-right: 80px;
+	margin-bottom: 4px;
+	margin-left: 50px;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.alertIcon {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.alertTitle {
+	font-weight: bold;
+	font-size: 20px;
+	vertical-align: bottom;
+	display: inline-block
+}
+
+.btn_disabled {
+	cursor: auto !important;
+	opacity: 0.6;
+}
+
+/* SIM Inventory */
+.newbox {
+	float: left;
+	border: 1px solid #D5D5D5;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.search-subheader {
+	margin-bottom: 30px;
+	font-family: Arial;
+	color: #333333;
+	font-size: 18px;
+	font-weight: Bold;
+}
+
+.selec-txt {
+	font-family: Arial;
+	color: #333333;
+	font-size: 18px;
+	font-weight: Bold;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.file-upload-text {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #D5D5D5;
+	margin-top: 15px;
+	font-family: Arial;
+	color: #333333;
+	font-size: 14px;
+}
+
+.inv-button {
+	margin-left: 185px;
+	margin-top: 20px;
+}
+
+#cancelbutton {
+	margin-left: 20px;
+}
+
+.custom-file-input input[type="file"] {
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	zoom: 1; /* Fix for IE7 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+#simbtn {
+	margin-top: 2px;
+	margin-left: -3px;
+}
+
+#selectedFile-txt {
+	margin-top: 0px;
+	border-right: none;
+	border: 2px solid #f5f5f5;
+}
+
+#selectedFile-txt:focus, #txt_msisdn:focus, #txt_iccid:focus {
+	outline: none !important;
+	border: 2px solid #428600;
+}
+
+.custom-file-input input[type="text"] {
+	width: 71%;
+	display: block;
+	float: left;
+	height: 21px;
+}
+
+.statbox {
+	border: 1px solid #D5D5D5;
+	border-radius: 3px;
+	background-color: #f5f5f5;
+	height: 263px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+
+.statistic-date {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+}
+
+.statistic-title {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.graph-slate {
+	margin-top: 0px;
+	width: 100%;
+	float: left;
+	padding-left: 0px;
+	background-color: white;
+	padding-top: 13px;
+	padding-right: 5px;
+}
+
+.graph-col {
+	margin-top: 11px;
+}
+
+.stat-avail {
+	width: 68px;
+	height: 60px;
+	background-color: gold;
+}
+
+.stat-avail:after {
+	font-size: 14px;
+	left: 78px;
+	position: relative;
+	content: "300";
+	top: 14px;
+}
+
+.stat-used:after {
+	font-size: 14px;
+	left: 78px;
+	position: relative;
+	content: "700";
+	top: 44px;
+}
+
+.stat-used {
+	width: 68px;
+	height: 140px;
+	background-color: #e60000;
+}
+
+.stat-scale {
+	float: right;
+	margin-left: 42px;
+	font-size: 14px;
+	margin-right: 19px;
+	margin-top: 150px;
+}
+
+.avail-scale, .used-scale {
+	width: 12px;
+	border-style: solid;
+	border-width: 2px;
+	height: 12px;
+	margin: 10px 0;
+}
+
+.used-scale {
+	background-color: #e60000;
+	border-color: #e60000;
+}
+
+.used-scale:after {
+	padding-left: 17px;
+	content: "Available";
+}
+
+.avail-scale {
+	background-color: gold;
+	border-color: gold;
+}
+
+.avail-scale:after {
+	padding-left: 18px;
+	content: "Used";
+}
+
+.imported {
+	display: none;
+	margin-top: 10px;
+}
+
+.importbox {
+	border: 1px solid #428600;
+	background-color: #F4F8F0;
+}
+
+.imp-text {
+	margin: 7px 0;
+	font-family: Arial /* Regular */;
+	color: #333333;
+	font-size: 14px;
+}
+
+.import-pipe {
+	margin: 13px;
+}
+
+.servbox, .records-sim-title {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #999999;
+	margin-top: 50px;
+	font-size: 30px;
+	font-family: Vodafone Rg;
+	font-weight: bold;
+	color: #333333
+}
+
+.records-sim-title {
+	margin-top: 40px;
+}
+
+.records-sim {
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+
+.dashboard tr {
+	height: 48px;
+}
+
+.dashboard tr:nth-child(odd) {
+	background: #ffffff;;
+}
+
+/*  Define the background color for all the EVEN background rows  */
+.dashboard tr:nth-child(even) {
+	background: #ffe3de;
+}
+
+/* Service Portal */
+.search-crit {
+	float: left;
+	background: #f5f5f5;
+	border-radius: 3px;
+	border: 1px solid #D5D5D5;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+}
+
+.radio-text {
+	margin-top: 10px;
+}
+
+.icc {
+	margin-left: 20px;
+}
+
+.radio-icc {
+	margin-top: 7px;
+}
+
+.search-btn {
+	margin-left: 8px;
+	margin-top: 33px;
+}
+
+.content-text {
+	font-family: Arial;
+	color: #333333;
+	font-size: 14px;
+}
+
+.downloadservice {
+	margin-left: 0px;
+	width: 20px;
+}
+
+.printservice {
+	position: relative;
+	margin-left: 20px;
+	width: 20px;
+}
+
+.pagination {
+	display: none;
+	padding-top: 10px;
+	font-family: Arial;
+	color: #333333;
+	font-size: 12px;
+}
+
+#optionselector {
+	font-family: Arial;
+	font-size: 12px;
+	margin-bottom: 10px;
+	height: 30px;
+	width: 47px;
+	box-shadow: 0 1px 3px rgba(00, 0, 0, 0.20) inset;
+	border: 1px solid  #D5D5D5;
+}
+
+.pagination_btn {
+	background-color: white;
+	box-shadow: none;
+	border: none;
+	cursor: pointer;
+}
+
+.pagination-arrows {
+	vertical-align: middle;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.current-page {
+	margin-right: 4px;
+	color: red;
+	background-color: white;
+	box-shadow: none;
+	border: none;
+	vertical-align: super;
+	font-size: 12px;
+}
+
+.servimg {
+	cursor: pointer;
+	margin-top: 10px;
+	float: right;
+}
+
+.dashboard th {
+	text-align: left;
+	background-color: #e60000;
+	color: #FFFFFF;
+	padding: 7px;
+	font-family: Arial;
+	font-size: 13px;
+}
+
+.dashboard td {
+	color: #333333;
+	padding: 7px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.dashboard {
+	width: 100%;
+	border-spacing: 0px;
+}
+
+.dashboard tr:nth-child(odd) {
+	background: #ffffff;;
+}
+
+/*  Define the background color for all the EVEN background rows  */
+.dashboard tr:nth-child(even) {
+	background: #ffe3de;
+}
+
+.records {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	border-bottom: solid 1px #999999;
+}
+
+.action-col {
+	text-align: center;
+}
+
+.agent-col {
+	cursor: pointer;
+}
+
+.imei-col {
+	display: none;
+}
+
+#txt_msisdn, #txt_iccid {
+	width: 86%;
+	border: 2px solid #f5f5f5;
+}
+
+/*tooltips and overlays*/
+.agentName-tt, .imei-tt {
+	font-size: 13px;
+	padding: 5px 10px;
+	display: none;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 1px 2px rgba(00, 0, 0, 0.65);
+	top: 369px;
+	background-color: white;
+	position: absolute;
+}
+
+.agentName-tt:after, .imei-tt:after {
+	background-repeat: no-repeat;
+	width: 23px;
+	background-image: url("/img/hover-triangle.png");
+	content: ' ';
+	position: absolute;
+	left: 10px;
+	top: 24px;
+	height: 15px;
+}
+
+.action-ovl {
+	display: none;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 1px 2px rgba(00, 0, 0, 0.65);
+	background-color: white;
+	position: absolute;
+}
+
+.action-item,.regenarate_code_action {
+	display: block;
+	margin: 10px;
+	font-size: 13px;
+}
+
+.table-action {
+	cursor: pointer;
+}
+
+.table-action-clicked {
+	border: 4px solid #FFFFFF;
+	box-shadow: 0 1px 2px rgba(00, 0, 0, 0.65);
+}
+
+/* Admin Home */
+.homeTabs {
+	cursor: pointer;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	background-image: url("/img/grey-rhombus-with-circle.png"),
+		url("/img/secmenu/SIM-Inventory.png"),
+		linear-gradient(#f5f5f5, #e3e3e3);
+	border: 1px solid #d5d5d5;
+	height: 216px;
+	margin: 0 4px;
+	box-shadow: 0 2px 2px rgba(00, 0, 0, 0.60);
+}
+
+.homeTabContainer {
+	margin-top: 110px;
+}
+
+.homeTabsText {
+	height: 110px;
+	margin: 9px;
+	font-family: Arial;
+	color: #333333;
+	font-size: 14px;
+}
+
+.homeTabsTitle {
+	font-size: 30px;
+	margin-top: 105px;
+	margin-left: 191px;
+	font-family: Vodafone Rg;
+}
+
+.homeTabsImg {
+	position: absolute;
+	top: 97px;
+	left: 116px;;
+}
+
+/* Login */
+.login-fm {
+	margin-top: 10px;
+}
+
+.loghead {
+	margin-top: 120px;
+	margin-left: 3%;
+	font-family: Vodafone Rg;
+	font-size: 45px;
+	color: #FFFFFF;
+	width: 55%;
+}
+
+.stretch {
+	background-position: center center;
+	background-size: cover;
+	background-image: url('/img/Login-img_Desktop.png');
+	height: 411px;
+	width: 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.fm-data {
+	margin-top: 20px;
+}
+
+#username, #password {
+	width: 90%;
+}
+
+.voda-btn {
+	display: inline;
+	width: 100%;
+	background-position: right -1540px;
+}
+
+#forgot-link {
+	font-size: 16px;
+	margin-top: 26px;
+	margin-bottom: 30px;
+	text-decoration: underline;
+	color: #333333;
+	cursor: pointer;
+}
+
+#login {
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+/* New Subscription */
+#newSubscription {
+	margin-top: 50px;
+}
+
+.getEsim {
+	margin-bottom: 20px;
+	color: #000000;
+	font-family: Vodafone Rg;
+	font-size: 30px;
+	border-bottom: 1px solid #999999;
+	padding-bottom: 10px;
+}
+
+.titleText {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.titleText span {
+	padding: 2px;
+}
+
+.titleText span:not(:first-child ){
+display : block;
+}
+
+.titleText1 {
+	display: inline-block;
+	vertical-align: bottom;
+	padding-top: 21px;
+}
+
+.subType .cs-options {
+	width: 219px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px 0;
+}
+
+.subType .cs-title {
+	padding: 0 116px 0 0;
+}
+
+.type {
+	margin-top: 20px;
+	font-size: 16px;
+	font-family: Arial;
+	color: #333333;
+	font-weight: Bold;
+}
+
+.newSim {
+	background: #f4f4f4 none repeat scroll 0 0;
+	margin-top: 30px;
+	box-shadow: 0 0 0 0 #F5F5F5;
+	height: 276px;
+	margin-left: 0px;
+	border: 1px solid #D5D5D5;
+	border-radius: 3px;
+	border-bottom: 1px solid #999999;
+}
+
+.eSIMimage img {
+	margin-top: 20px;
+	height: 230px;
+	width: 360px;
+}
+
+.newEsim {
+	margin-top: 45px;
+}
+
+.newEsim-col-rt {
+	margin-left: 10px;
+}
+
+.newEsim-col-lt {
+	padding-left: 9px;
+	padding-right: 10px;
+}
+
+.subs-text {
+	font-family: Arial;
+	color: #666666;
+	font-size: 13px;
+	padding-right: 10px;
+}
+
+.eSIM {
+	margin-top: 70px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	height: 39px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #9C2AA0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 3px;
+}
+
+.subscriptionType {
+	padding: 10px 14px;
+	margin-top: 10px;
+	/* width: 140px; */
+	width: 180px;
+	height: 39px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-family: Arial;
+	color: #333333;
+}
+
+#getNewEsim_Sc2 {
+	display: none;
+}
+
+.eSIMimage-subscription {
+	border-right: 1px solid #D5D5D5;
+	height: 277px;
+}
+
+.iccidNumber {
+	margin-left: 12px;
+	font-family: Arial;
+	font-size: 14px;
+	color: white;
+	margin-top: -80px;
+}
+
+#pin_puk {
+	padding-left: 22px;
+}
+
+.scan-icon {
+	cursor: pointer;
+	margin-top: -44px;
+	margin-left: 212px;
+}
+
+.imei input, .eid input, .msisdn input {
+	width: 87%;
+}
+
+.barcode {
+	width: 58%;
+	height: 28px;
+	margin-left: 14px;
+}
+
+.copy-print {
+	display: none;
+	background: #f4f4f4 none repeat scroll 0 0;
+	box-shadow: 0 0 0 0 #F5F5F5;
+	padding-bottom: 20px;
+	margin-left: 0px;
+	border: 1px solid #D5D5D5;
+	margin-top: -11px;
+	border-radius: 3px;
+}
+
+.copyPrint {
+	margin-left: 47px;
+	margin-top: 20px;
+}
+
+.copy {
+	margin-left: 10px;
+}
+
+.ns_border {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #999999;
+	margin-top: 10px;
+}
+
+.activation {
+	margin-top: 10px;
+}
+
+.requestActivation {
+	float: right;
+}
+
+#deviceDetails {
+	margin-top: 50px;
+	display: none;
+}
+
+.device {
+	width: 100%;
+	float: left;
+	background: #f4f4f4 none repeat scroll 0 0;
+	border: 1px solid #D5D5D5;
+}
+
+.device-first {
+	padding: 10px;
+}
+
+.device-second {
+	border-left: 1px solid #D5D5D5;
+	padding: 10px;
+}
+
+.subscrptext {
+	padding-left: 10px;
+}
+
+.boldtext {
+	font-weight: Bold;
+}
+
+.icictxt {
+	padding-left: 10px;
+}
+
+.msisdn {
+	width: 99%;
+	margin-top: 20px;
+	float: left;
+	border: 1px solid #D5D5D5;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.txt_msisdn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.note-text {
+	font-family: Arial;
+	color: #666666;
+	font-size: 13px;
+	margin-top: 30px;
+}
+
+.newEsim1-subscription {
+	border-radius: 14px;
+	background-color: #e60000;
+	margin-top: 24px;
+	height: 220px;
+	width: 332px;
+	margin-left: 5px;
+	height: 203px;
+}
+
+#pin1 {
+	position: relative;
+	margin-left: 3%;
+	color: white;
+	bottom: -83px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#pin2 {
+	position: relative;
+	margin-left: 3%;
+	color: white;
+	bottom: -113px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#puk1 {
+	position: relative;
+	margin-left: 15%;
+	color: white;
+	bottom: -83px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#puk2 {
+	position: relative;
+	margin-left: 15%;
+	color: white;
+	bottom: -113px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#pic {
+	margin-top: 20px;
+	width: 333px;
+}
+
+#confirmation {
+	margin-top: 50px;
+	display: none;
+}
+
+#activation1 {
+	margin-top: 50px;
+	display: none;
+}
+
+#finishActivation {
+	margin-top: 50px;
+	display: none;
+}
+
+.viewStatus {
+	color: #000000;
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+	font-family: Arial;
+}
+
+.backHome {
+	margin-left: 284px;
+	margin-top: 0px;
+	height: 39px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #9C2AA0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 3px;
+}
+
+.confirmationCode {
+	background-image: url('/img/Picture3.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	overflow: hidden;
+	margin-top: 20px;
+	height: 355px;
+	border: 1px solid #D5D5D5;
+}
+
+.code {
+	margin-left: 120px;
+	margin-top: 40px;
+}
+
+#txt_confirm {
+	margin-top: 10px;
+	width: 8%;
+	margin-left: 149px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.printConfirm {
+	margin-left: 20px;
+	margin-top: 87px;
+}
+
+.confirm_txt {
+	margin-left: 20px;
+}
+
+.qrcode1 {
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 240px;
+	margin-bottom: 20px;
+}
+
+.sidetext {
+	margin-left: 293px;
+	margin-top: -141px;
+	width: 29%;
+}
+
+.print-confirm {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.acttext {
+	margin-left: 59px;
+	margin-top: 46px;
+}
+
+/*wizard*/
+.wizard {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-left: 35px;
+}
+
+.wizard-stp {
+	padding-left: 0px;
+	list-style: none;
+	max-width: 890px;
+}
+
+.progress-line {
+	display: inline;
+}
+
+.progress, .progress_transp {
+	margin-left: -5px;
+	margin-bottom: 30px;
+	display: inline-block;
+	background-color: silver;
+	height: 3px;
+	width: 69%;
+	right: 0;
+	z-index: -1;
+}
+
+.progress {
+	width: 20%;
+}
+
+.step {
+	display: inline-block;
+	margin-left: -5px;
+}
+
+.wizard-stp-lbl {
+	padding-left: 0px;
+	list-style: none;
+}
+
+.step_lbl {
+	font-size: 14px;
+}
+
+.waiting {
+	background-color: rgb(0, 124, 146);
+}
+
+.completed {
+	background-color: #428600;
+}
+
+.step_lbl:first-of-type {
+	margin-left: -5px;
+}
+
+.step_lbl:nth-of-type(3) {
+	margin-left: 16px;
+}
+
+.step_lbl:nth-of-type(2) {
+	margin-left: 12px;
+}
+
+.step_lbl:last-of-type {
+	margin-left: 24px;
+	width: auto;
+}
+
+/*min media queries*/
+.homeTabs {
+	margin: 0 9px;
+}
+
+.custom-file-input input[type="text"] {
+	width: 75%;
+}
+
+.loghead {
+	font-size: 45px;
+	margin-left: 175px;
+	width: auto;
+}
+
+.newEsim-col-rt {
+	margin-left: -5px;
+}
+
+.eSIM {
+	margin-top: 90px;
+}
+
+.copyPrint {
+	margin-left: 15px;
+}
+
+.barcode {
+	width: 49%;
+	margin-left: 35px;
+}
+
+.iccidNumber {
+	margin-left: 8%;
+}
+
+#pic {
+	height: 236px;
+	width: 377px;
+	margin-left: 4px;
+}
+
+.newEsim1-subscription {
+	margin-left: 13px;
+	height: 220px;
+	width: 377px;
+}
+
+.step_lbl:first-of-type {
+	margin-left: -5px;
+}
+
+.step_lbl:nth-of-type(3) {
+	margin-left: 17px;
+}
+
+.step_lbl:nth-of-type(2) {
+	margin-left: 2px;
+}
+
+.step_lbl:last-of-type {
+	margin-left: 67px;
+	padding-left: 18px;
+}
+
+.sidetext {
+	margin-left: 293px;
+}
+
+.scan-icon {
+	margin-left: 222px;
+}
+
+.homeTabsTitle {
+	font-size: 36px;
+}
+
+.custom-file-input input[type="text"] {
+	width: 78%;
+}
+
+.graph-slate {
+	margin-top: 1px;
+	width: 85%;
+	padding-left: 42px;
+	padding-right: 0px;
+}
+
+.statbox {
+	height: 246px;
+}
+
+.progress {
+	width: 24%;
+}
+
+.eSIMimage img {
+	width: 377px;
+	margin-left: 45px;
+}
+
+.newEsim-col-lt {
+	padding-left: 44px;
+}
+
+.newEsim1-subscription {
+	width: 377px;
+	margin-left: 46px;
+}
+
+#pin_puk {
+	padding-left: 44px;
+}
+
+.scan-icon {
+	cursor: pointer;
+	margin-bottom: -7px;
+	margin-left: -40px;
+}
+
+.step_lbl:first-of-type {
+	margin-left: -5px;
+}
+
+.step_lbl:nth-of-type(3) {
+	margin-left: 24px;
+}
+
+.step_lbl:nth-of-type(2) {
+	margin-left: 27px;
+}
+
+.step_lbl:last-of-type {
+	margin-left: 104px;
+	padding-left: 18px;
+}
+
+.sidetext {
+	margin-left: 347px;
+	margin-top: -141px;
+	width: 34%;
+}
+
+.backHome {
+	margin-left: 315px;
+}
+
+.tabs .firstTab {
+	margin-left: -1.6em;
+}
+
+.setting_addButton {
+	word-break: break-all;
+	right: 87%;
+	position: absolute;
+	margin-top: 50px;
+}
